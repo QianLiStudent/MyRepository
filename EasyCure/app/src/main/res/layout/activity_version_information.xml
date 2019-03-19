@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15"
+        android:layout_marginBottom="@dimen/h12">
+        <ImageView
+            android:id="@+id/activity_version_information_iv"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version_Information"
+            android:textSize="@dimen/h15"
+            android:layout_toRightOf="@id/activity_version_information_iv"
+            android:layout_marginLeft="@dimen/w6"></TextView>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/activity_version_information_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/h10"
+        android:scrollbars="none"
+        ></ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增"
+        android:onClick="click1"></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删"
+        android:onClick="click2"></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改"
+        android:onClick="click3"></Button>
+
+</LinearLayout>

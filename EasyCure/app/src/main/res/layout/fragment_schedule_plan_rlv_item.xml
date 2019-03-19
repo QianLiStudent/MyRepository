@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/h15"
+    android:background="@drawable/rlv_press_state">
+
+    <RelativeLayout
+        android:id="@+id/fragment_schedule_plan_rlv_item_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/w20">
+        <View
+            android:id="@+id/fragment_schedule_plan_rlv_item_v"
+            android:layout_width="@dimen/w3"
+            android:layout_height="@dimen/h22"
+            android:background="#f00"></View>
+
+        <RelativeLayout
+            android:id="@+id/fragment_schedule_plan_rlv_item_rl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_schedule_plan_rlv_item_v"
+            android:layout_marginLeft="@dimen/w15">
+            <TextView
+                android:id="@+id/fragment_schedule_plan_rlv_item_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04"
+                android:textSize="@dimen/h14"
+                android:layout_centerHorizontal="true"></TextView>
+
+            <TextView
+                android:id="@+id/fragment_schedule_plan_rlv_item_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JUN"
+                android:textSize="@dimen/h12"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:layout_below="@id/fragment_schedule_plan_rlv_item_tv1"
+                android:layout_marginTop="-1dp"
+                android:layout_centerHorizontal="true"
+                ></TextView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_schedule_plan_rlv_item_rl2"
+            android:layout_marginLeft="@dimen/w15">
+
+            <TextView
+                android:id="@+id/fragment_schedule_plan_rlv_item_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                android:textSize="@dimen/h14"
+                android:layout_marginTop="@dimen/h1"></TextView>
+
+            <TextView
+                android:id="@+id/fragment_schedule_plan_rlv_item_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018年10月22号15:00-18:00"
+                android:textSize="@dimen/h13"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_below="@id/fragment_schedule_plan_rlv_item_tv3"
+                android:layout_marginTop="@dimen/h2"></TextView>
+
+            <TextView
+                android:id="@+id/fragment_schedule_plan_rlv_item_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写点什么吧1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+                android:textColor="#A4A4A4"
+                android:textSize="@dimen/h13"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:layout_below="@id/fragment_schedule_plan_rlv_item_tv4"
+                android:layout_marginTop="@dimen/h8"
+                ></TextView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#000"
+        android:layout_below="@id/fragment_schedule_plan_rlv_item_rl1"
+        android:layout_marginTop="@dimen/h15"
+        ></View>
+
+
+</RelativeLayout>

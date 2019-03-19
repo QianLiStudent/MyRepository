@@ -1,0 +1,280 @@
+<resources>
+    <string name="app_name">EasyCure</string>
+    <string name="main_title">We work for and\nfor you 24h daily</string>
+    <string name="main_message">Your health will be guarded by us</string>
+    <string name="call_us">Call Us</string>
+    <string name="check_our_shop">Check Our Shop</string>
+    <string name="health_information">Health Information</string>
+    <string name="something_you_want">Something You Want</string>
+    <string name="forgot_pwd">Forgot Password ?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="no_account">Don\'t have an account yet ? </string>
+    <string name="sign_up">  Sign Up</string>
+    <string name="sign_up_big">SIGN UP</string>
+    <string name="health_knowledge">Health Knowledge</string>
+    <string name="classify">Classify</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_big">ABOUT US</string>
+    <string name="contact">Contact</string>
+    <string name="contact_big">CONTACT</string>
+    <string name="where">Where</string>
+    <string name="where_big">WHERE</string>
+    <string name="easy_cure">Easy Cure</string>
+    <string name="who_we_are">Who We Are ?</string>
+    <string name="introduce_us">We are an individual developer and currently studying
+        at the Zhuhai College of Beijing Institute of Technology, a student at the
+        School of Computer Science. The production of the software was completed by
+        2 people and is currently version 1.0.</string>
+    <string name="event_name">Event Name</string>
+    <string name="event">Event</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="find_article">Find the article</string>
+    <string name="schedule">Schedule</string>
+    <string name="schedule_big">SCHEDULE</string>
+    <string name="plan">Plan</string>
+    <string name="disease_diagnosis">Disease Diagnosis</string>
+    <string name="medicine_advice">Medicine Advice</string>
+    <string name="eyes_advice">Eyes Advice</string>
+    <string name="food_advice">Food Advice</string>
+    <string name="sports_advice">Sports Advice</string>
+    <string name="sleep_advice">Sleep Advice</string>
+    <string name="check_the_body_advice">Check The Body Advice</string>
+    <string name="tea_drinking_advice">Tea Drinking Advice</string>
+    <string name="main">MAIN</string>
+    <string name="prompt">Prompt</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_memo">Are you sure to delete this memo?</string>
+    <string name="successfully_deleted">Successfully Deleted</string>
+    <string name="successfully_updated">Successfully Updated</string>
+    <string name="successfully_added">Successfully Added</string>
+    <string name="nothing_to_show">nothing to show</string>
+    <string name="find_medicine">Find medicine</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="captcha">Captcha</string>
+    <string name="get_captcha">Get Captcha</string>
+    <string name="mine">Mine</string>
+    <string name="more">More</string>
+    <string name="help">Help</string>
+    <string name="credit">Credit</string>
+    <string name="security_settings">Security Settings</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="version_information">Version Information</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="signout_dialog_title">Prompt</string>
+    <string name="signout_dialog_message">Are you sure you want to log out?</string>
+    <string name="next">NEXT</string>
+    <string name="username">Username</string>
+    <string name="username_can_not_be_empty">Username can not be empty</string>
+    <string name="password_can_not_be_empty">Password can not be empty</string>
+    <string name="password_length">Password cannot be less than 6 digits</string>
+    <string name="get_code_error">The network speed is slow, please try again later</string>
+    <string-array name="security_question_array1">
+        <item>What is your mother\'s name? </item>
+        <item>What is your father\'s name?</item>
+        <item>Your spouse\'s name is?</item>
+        <item>Where is your birthplace? </item>
+    </string-array>
+    <string-array name="security_question_array2">
+        <item>What is the name of your high school class teacher?</item>
+        <item>What is the name of your junior high school teacher?</item>
+        <item>What is the name of your primary school teacher?</item>
+        <item>What is your student number (or job number)?</item>
+    </string-array>
+    <string-array name="security_question_array3">
+        <item>When is your father\'s birthday?</item>
+        <item>When is your mother\'s birthday?</item>
+        <item>When is your birthday?</item>
+        <item>When is your spouse\'s birthday?</item>
+    </string-array>
+    <string name="finish_enroll">Finish Registration</string>
+    <string name="security_not_empty">Security number cannot be empty</string>
+    <string name="secret_answer_not_empty">Secret answer cannot be empty</string>
+    <string name="phone_number_not_empty">Phone number can not be blank</string>
+    <string name="wrong_pwd">Wrong Password</string>
+    <string name="security_answer">Security Answer</string>
+    <string name="security_phone_num">Security Phone Num</string>
+    <string name="retrieve_password">Retrieve Password</string>
+    <string name="find_back_account">You can choose to send a verification code to the previously bound secure
+        phone number or fill in the secret question to retrieve the account.</string>
+    <string name="send">Send</string>
+    <string name="account_not_empty">Account cannot be empty</string>
+    <string name="account_is_empty">Account does not exist</string>
+    <string name="account_is_exist">Account is exist</string>
+    <string name="check_successful">Successful verification</string>
+    <string name="sms_send">SMS has been sent</string>
+    <string name="verification_failed">Verification failed</string>
+    <string name="reset_account">Reset Account</string>
+    <string name="reset_account_text">The security number can be successfully modified after passing the verification.</string>
+    <string name="reset">Reset</string>
+    <string name="some_info_empty">Please complete the information</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_empty_or_inconsistent">Password is empty or inconsistent</string>
+    <string name="update_all_security_question">Confidential issues need to be fully updated</string>
+    <string name="new_security_phone_num">New security phone num</string>
+    <string name="reset_successful">Reset Successful</string>
+    <string name="finish_setting">Finish Setting</string>
+    <string name="setting_successful">Setting Successful</string>
+    <string name="login_num">The number you are logged in to</string>
+    <string name="exit">Press again to exit</string>
+    <string name="title_no_empty">Title can not be empty</string>
+    <string name="about">About</string>
+    <string name="check_update">Check Update</string>
+    <string name="release_notes">Release Notes</string>
+    <string name="version_Information">Version Information</string>
+    <string name="service_agreement">Service Agreement</string>
+    <string name="automatically_update">Automatically Updates</string>
+    <string name="latest_version">Latest Version</string>
+    <string name="detected_latest_version">Detected The Latest</string>
+    <string name="only_wifi">Only WiFi</string>
+    <string name="never">Never</string>
+    <string name="automatic_download">Automatic Download</string>
+    <string name="version">version</string>
+    <string name="version_name">version name</string>
+    <string name="release_notes1">EasyCure version 1 is online. Convenient drug shopping store,
+        health article related information, good health plan recommendation, excellent hospital
+        and pharmacy location service is the biggest feature of this product, and the software
+        supports English version service, which is convenient for English speakers.</string>
+    <string name="ecure_service_agreement">ECure Service Agreement</string>
+    <string name="ec_service_agreement">EasyCure Service Agreement</string>
+    <string name="service_agreement1">1.Confirmation of ECure Service Agreement</string>
+    <string name="service_agreement2">2.ECure service related definition</string>
+    <string name="service_agreement3">3.Service content provided by ECure</string>
+    <string name="service_agreement4">4.Registration, use and cancellation of ECure accounts</string>
+    <string name="service_agreement5">5.Considerations for using the ECure service</string>
+    <string name="service_agreement6">6.Commitment of users legally using ECure services</string>
+    <string name="service_agreement7">7.User rights protection and information protection</string>
+    <string name="service_agreement8">8.Force majeure, exemption and limitation of liability</string>
+    <string name="service_agreement9">9.Protection of intellectual property rights</string>
+    <string name="service_agreement_foreword">Thank you for choosing ECure service. The ECure Service Agreement (hereinafter referred to
+    as this Agreement) is signed by the ECure Team (hereinafter referred to as us)</string>
+    <string name="service_agreement1_content">1、Please read the contents of this agreement carefully. If you have any
+        questions about the content of this agreement or the information on the page, please do not proceed to the next
+        step. You can consult by adding ECure official QQ: 844964206, so that we can explain and explain for you. By clicking
+        on the page or by other means, you agree to this Agreement.\n
+    2.If we modify this agreement, we will notify you by popping up the window. If you are unable to agree to change the
+        content of the revised agreement, you have the right to stop using the related services; if the two parties agree,
+        the relevant services and corresponding agreement contents may be changed separately.\n
+    3.If you are a person without civil capacity or a person with limited capacity for civil conduct, please inform your
+        guardian and read this agreement and use our services under the direction of your guardian. If you are not a user
+        within the territory of the People\'s Republic of China (for the purposes of this agreement, excluding Hong Kong,
+        Macao Special Administrative Region and Taiwan), you must also abide by the laws of your country or region, and you
+        will confirm that you have entered into and traveled this Agreement. Violation of laws and regulations of the country
+        or region in which you belong, reside or conduct business or other business.</string>
+    <string name="service_agreement2_content">1、ECure account (or \"account\"): refers to the account that you obtained after you
+        obtained the ECure login account and verified by mobile phone for you to use the ECure service.\n
+    2、ECure login account: refers to the mobile phone number that receives the verification code during the process of registering
+        the ECure account. This mobile phone number will be used as the login account of your ECure account.\n
+    3、Identity element: refers to the information element we use to identify you. Currently, we only support SMS verification code
+        verification.\n
+    4、Nickname: refers to the account name that you open to the public. We treat the user\'s account number (ie mobile phone number)
+        confidentially, that is, do not disclose the mobile phone number.\n
+    5、Official QQ: 844964206</string>
+    <string name="service_agreement3_content">1、Payment: After the user purchases the medicine, he can enter the payment link.
+        Currently, he only supports WeChat and Alipay.\n
+    2、Drug purchase: We recommend several drugs with high sales and heat for the basic illness selected by the user, but only for
+        screening. The drugs selected by this function can only be used as reference drugs for users to choose basic diseases, such
+        as serious illness. It is not the service object of this service, and it is strongly recommended that you go to the hospital in time.\n
+    3、Health Information: We will update the Health Information Module regularly to ensure that users can learn some of the common
+        health tips in the life of the article and keep the user\'s health information fresh in a regularly updated way.\n
+    4、Health knowledge: We will make recommendations on the main parts of the body or some living habits, and let the user know
+        how to do a good job of health and maintenance, so as to develop a good habit.\n
+    5、Memo: The memo function is provided in the software, allowing the user to write the memo content in the software. When the user
+        uses the software again, he will pay attention to the memo information recorded before.\n
+    6、Positioning: We use the positioning system of Gaode map to provide users with location services
+        for surrounding hospitals and pharmacies.\n
+    7、Internationalization: The software provides Chinese and English bilingual support services, and automatically selects the
+        display language according to the user\'s mobile phone time zone. </string>
+    <string name="service_agreement4_content">1、Registration: All services are available after registration is complete. The nickname
+        you set in your account will be visible to the outside world, and your mobile number (ie login account) will be kept confidential.\n
+        2、Login: We only provide login for this platform (registered users of this platform) or third-party platforms (QQ, WeChat).\n
+        3、Use: The identity element allows us to identify the basis of your identity, please be sure to keep it safe.
+        The operation using the identity element and the instructions issued are deemed to be made by you. The account,
+        password and other information caused by your reasons are fraudulently used, stolen or illegally used, and the
+        risks and losses caused by you are at your own risk.\n
+        4、Logout: You can only apply for cancellation of your own account and cancel it in accordance with our procedures.
+        In order to protect the legitimate interests of you and other users, the account you apply for cancellation should
+        have no unresolved rights or obligations or other disputes arising from the cancellation of the account. There are
+        no outstanding transactions.</string>
+    <string name="service_agreement5_content">1、Authentication: During the authentication process, keep the network
+        environment unblocked and ensure that the network environment is secure and login and payment operations are performed.\n
+    2、Self-purchasing: We offer a drug store for users to show users high-quality, high-heat, and good-selling drugs after choosing
+        the right condition. But this is only a recommendation and can only be used as a reference. If the user is indeed able to
+        determine the common symptoms such as cough, etc., you can refer to the results recommended by the drug to purchase the drug.
+        If the user is not sure about the specific condition and the condition is serious, it is not the target of this function, and
+        it is strongly recommended. The user went to the hospital for medical treatment in time. If the user makes a mistake, purchases
+        the wrong product, or is seriously ill, still using the software to solve the serious problem and cause serious physical problems,
+        all responsibility shall be borne by the user and the application will not be held responsible.\n
+    3、Payment: We provide a professional payment interface (Alipay payment, WeChat payment) and allow users to pay for drugs after
+        purchasing the drug. The process is consistent with ordinary online shopping.\n</string>
+    <string name="service_agreement6_content">1、You are required to abide by the laws and regulations of the People\'s Republic of China
+        and the countries or regions in which you belong, reside or carry out business activities or other business, and may not use our
+        services for illegal purposes (including transactions for prohibiting or restricting trading goods). ), nor can we use
+        our services illegally.\n
+    2、You may not use our services to engage in the infringement of the lawful rights and interests of others or violate national
+        laws and regulations, otherwise we have the right to investigate, delay or refuse to settle or stop providing services, and
+        you are responsible for any legal liability, such as this leads us or other If the party is damaged, you will be liable for
+        compensation.</string>
+    <string name="service_agreement7_content">We always adhere to the principle of \"customer first\" and strive to bring you small
+        and beautiful changes. We attach great importance to the protection of your information, and strictly implement the information
+        security protection system to ensure that your user data will not be leaked, create a good network environment for you, and
+        enhance your user experience.</string>
+    <string name="service_agreement8_content">Disclaimer\nWe are not liable for the following reasons: We are exempt from
+        liability:\n1.Our system is down for maintenance or upgrades;\n
+    2、Force majeure causes such as typhoons, earthquakes, floods, lightning or terrorist attacks;\n
+    3、Your equipment hardware and communication lines, power supply lines have failed, etc.;\n
+    4、Due to your improper operation or use of our services, etc., without our authorization or approval;\n
+    5、Due to viruses, Trojans, malicious program attacks, network congestion, system instability, system or device failures,
+        communication failures, power failures, banking reasons, third-party services, or government actions.\n
+    In spite of the provisions of the preceding paragraph, we will take reasonable actions to actively promote the return of services to normal.\n\n
+    Limitation of Liability\n We may provide services to you and your (transactional) counterparty at the same time. You agree
+        to expressly waive any actual or potential conflict of interest for such conduct that we may have, and we cannot claim
+        that we are providing There is a legal flaw in the service.</string>
+    <string name="service_agreement9_content">1、Do not use, modify, decompile, reproduce, publicly transmit, alter, distribute,
+        make hairstyles or publicly publish ECure programs or content without our written consent;\n2、Respect for intellectual property
+        rights is also your obligation. If there is a violation, you will be liable for damages.</string>
+
+    <string name="security_setting_title">You can choose any one to fill in, and it will take effect immediately after saving the changes.</string>
+    <string name="unmodified_content">Unmodified content</string>
+    <string name="problem_help">Problem Help</string>
+    <string name="customer_service">My customer service</string>
+    <string name="feedback">Feedback</string>
+    <string name="abnormal_function_suggest">Abnormal Function Suggest</string>
+    <string name="choose_feedback_type">Choose your feedback type</string>
+    <string name="my_customer_service">My Customer Service</string>
+    <string name="content_customized">Custom content</string>
+    <string name="your_problem">Guess Your Problem</string>
+    <string name="modify_security_num">How to modify the security phone number</string>
+    <string name="modify_secret_issus">How to modify the secret issue</string>
+    <string name="modify_phone_num">How to change the bound phone number</string>
+    <string name="use_shopping_store">How to use the shopping store</string>
+    <string name="use_location_services">How to use location services correctly</string>
+    <string name="commit">Commit</string>
+    <string name="feedback_content">（Required）Problem you want to feedback.</string>
+    <string name="questions_and_opinions">Questions and opinions</string>
+    <string name="abnormal_function_fbi">Abnormal Function：Functional failure or unavailable</string>
+    <string name="product_suggestion_fbi">Product suggestion: poor user experience, I have suggestions</string>
+    <string name="security_issues_fbi">Security issues: passwords, privacy, fraud, etc.</string>
+    <string name="other_problems_fbi">Other problems</string>
+    <string name="input_more_than_10_chars">Enter a description of more than 10 words</string>
+    <string name="choose_feedback_issue">Choose problems to feedback</string>
+    <string name="input_length">Enter at least 10 characters</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="finish">Finish</string>
+    <string name="clear">Clear</string>
+    <string name="hospital">Hospital</string>
+    <string name="drugstore">Drugstore</string>
+    <string name="illness_selection">Illness\nSelection</string>
+    <string name="illness_selection_title">Illness_Selection</string>
+    <string name="positioning">Positioning</string>
+    <string name="illness">Illness</string>
+    <string name="query_disease">Query Disease</string>
+    <string name="history_record">History Record</string>
+    <string name="network_anomaly">The network went to Mars.</string>
+    <string name="reload">Reload</string>
+    <string name="article_lose">The article is missing, we will add it as soon as possible</string>
+    <string name="data_getting">Datas are loading，please wait a minute</string>
+    <string name="checking_network">Checking The Newwork</string>
+</resources>

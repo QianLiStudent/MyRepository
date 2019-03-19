@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+
+        <ImageView
+            android:id="@+id/activity_network_error_back"
+            android:layout_width="@dimen/w25"
+            android:layout_height="@dimen/h18"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/activity_network_error_iv"
+        android:layout_width="@dimen/w150"
+        android:layout_height="@dimen/h135"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h100"
+        android:background="@drawable/network_error"
+        android:layout_marginBottom="@dimen/h20"></ImageView>
+
+    <TextView
+        android:id="@+id/activity_network_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/network_anomaly"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_network_error_iv"></TextView>
+
+    <Button
+        android:id="@+id/activity_network_error_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reload"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/activity_network_error_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h8"
+        android:paddingTop="@dimen/h5"
+        android:paddingBottom="@dimen/h5"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:background="@drawable/btn_press_state"
+        ></Button>
+</RelativeLayout>

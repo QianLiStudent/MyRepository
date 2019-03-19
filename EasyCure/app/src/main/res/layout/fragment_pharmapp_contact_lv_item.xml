@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fragment_pharmapp_contact_lv_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:textSize="@dimen/h13"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w18"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/fragment_pharmapp_contact_lv_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018年10月21日 16:00"
+        android:textSize="@dimen/h13"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingRight="@dimen/w18"
+        android:layout_alignParentRight="true"></TextView>
+
+</RelativeLayout>

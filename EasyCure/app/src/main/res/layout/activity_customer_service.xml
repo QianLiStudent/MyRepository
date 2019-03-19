@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/h12"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w15"
+        android:background="@color/colorDeepSkyBlue">
+        <RelativeLayout
+            android:id="@+id/activity_customer_service_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/activity_customer_service_iv1"
+                android:layout_width="@dimen/w20"
+                android:layout_height="@dimen/h15"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_back3"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_customer_service"
+                android:textSize="@dimen/h15"
+                android:textColor="@color/colorWhite"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/activity_customer_service_iv1"
+                android:layout_marginLeft="@dimen/w10"></TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/activity_customer_service_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height='wrap_content'
+            android:text="Hi，"
+            android:textSize="@dimen/h18"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@id/activity_customer_service_rl"
+            android:layout_marginTop="@dimen/h15"></TextView>
+
+        <TextView
+            android:id="@+id/activity_customer_service_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height='wrap_content'
+            android:textSize="@dimen/h16"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/activity_customer_service_tv1"
+            android:layout_below="@id/activity_customer_service_rl"
+            android:layout_marginTop="@dimen/h15"></TextView>
+
+        <TextView
+            android:id="@+id/activity_customer_service_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_customized"
+            android:textSize="@dimen/h13"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@id/activity_customer_service_tv1"
+            android:layout_marginTop="@dimen/h5"
+            android:layout_marginBottom="@dimen/h5"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/h15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_problem"
+            android:textSize="@dimen/h15"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/w10"></TextView>
+
+        <ListView
+            android:id="@+id/activity_customer_service_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </LinearLayout>
+</LinearLayout>

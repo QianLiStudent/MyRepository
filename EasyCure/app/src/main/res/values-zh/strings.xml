@@ -1,0 +1,239 @@
+<resources>
+    <string name="app_name">EasyCure</string>
+    <string name="main_title">我们24小时\n为您服务</string>
+    <string name="main_message">您的健康将由我们守护</string>
+    <string name="call_us">致电客服</string>
+    <string name="check_our_shop">逛商店</string>
+    <string name="health_information">健康资讯</string>
+    <string name="something_you_want">更多</string>
+    <string name="forgot_pwd">忘记密码 ?</string>
+    <string name="sign_in">登录</string>
+    <string name="no_account">没有账号? </string>
+    <string name="sign_up">点我注册</string>
+    <string name="health_knowledge">健康常识</string>
+    <string name="classify">分类</string>
+    <string name="about_us">关于我们</string>
+    <string name="contact">备忘录</string>
+    <string name="where">定位</string>
+    <string name="who_we_are">我们是谁 ?</string>
+    <string name="introduce_us">我们是个人开发者，目前就读于北京理工大学珠海学院，是计算机学院的学生。
+    这个软件由2个人制作完成，目前是1.0版本。</string>
+    <string name="event_name">活动名称</string>
+    <string name="event">活动事项</string>
+    <string name="start">开始</string>
+    <string name="end">结束</string>
+    <string name="find_article">搜寻文章</string>
+    <string name="schedule">计划表</string>
+    <string name="plan">安排</string>
+    <string name="disease_diagnosis">Disease Diagnosis</string>
+    <string name="medicine_advice">药物建议</string>
+    <string name="eyes_advice">眼部护理</string>
+    <string name="food_advice">饮食健康</string>
+    <string name="sports_advice">运动锻炼</string>
+    <string name="sleep_advice">睡眠建议</string>
+    <string name="check_the_body_advice">定期检查身体</string>
+    <string name="tea_drinking_advice">饮茶建议</string>
+    <string name="main">首页</string>
+    <string name="prompt">提示</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete_memo">确定删除该条备忘录吗？</string>
+    <string name="successfully_deleted">删除成功</string>
+    <string name="successfully_updated">更新成功</string>
+    <string name="successfully_added">添加成功</string>
+    <string name="nothing_to_show">什么都没有哦</string>
+    <string name="find_medicine">查找药品</string>
+    <string name="phone_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="captcha">验证码</string>
+    <string name="get_captcha">获取验证码</string>
+    <string name="mine">设置</string>
+    <string name="more">更多</string>
+    <string name="help">求助反馈</string>
+    <string name="credit">信用</string>
+    <string name="security_settings">安全设置</string>
+    <string name="emergency_contact">紧急联系人</string>
+    <string name="version_information">版本信息</string>
+    <string name="sign_out">退出登录</string>
+    <string name="signout_dialog_title">提示</string>
+    <string name="signout_dialog_message">确定要注销登录吗？</string>
+    <string name="next">下一步</string>
+    <string name="username">用户名</string>
+    <string name="finish_setting">完成设置</string>
+    <string name="setting_successful">设置成功</string>
+    <string name="username_can_not_be_empty">用户名不能为空</string>
+    <string name="password_can_not_be_empty">密码不能为空</string>
+    <string name="password_length">密码不能低于6位</string>
+    <string name="update_all_security_question">密保问题需要全部更新</string>
+    <string name="get_code_error">网络速度慢，请稍后重试</string>
+    <string-array name="security_question_array1">
+        <item>您母亲的姓名是？</item>
+        <item>您父亲的姓名是？</item>
+        <item>您配偶的姓名是？</item>
+        <item>您的出生地是？</item>
+    </string-array>
+    <string-array name="security_question_array2">
+        <item>您高中班主任的名字是？</item>
+        <item>您初中班主任的名字是？</item>
+        <item>您小学班主任的名字是？</item>
+        <item>您的学号（或工号）是？</item>
+    </string-array>
+    <string-array name="security_question_array3">
+        <item>您父亲的生日是？</item>
+        <item>您母亲的生日是？</item>
+        <item>您的生日是？ </item>
+        <item>您配偶的生日是？</item>
+    </string-array>
+    <string name="ecure_service_agreement">ECure服务协议</string>
+    <string name="finish_enroll">完成注册</string>
+    <string name="security_not_empty">安全号码不能为空</string>
+    <string name="secret_answer_not_empty">密保答案不能为空</string>
+    <string name="phone_number_not_empty">手机号码不能为空</string>
+    <string name="wrong_pwd">密码错误</string>
+    <string name="security_answer">密保答案</string>
+    <string name="security_phone_num">安全手机号</string>
+    <string name="retrieve_password">找回密码</string>
+    <string name="find_back_account">你可以选择给之前绑定的安全手机号发送验证码或者填写密保问题找回账号。</string>
+    <string name="send">发送</string>
+    <string name="account_not_empty">账号不能为空</string>
+    <string name="account_is_empty">账号不存在</string>
+    <string name="account_is_exist">账号已存在</string>
+    <string name="check_successful">验证成功</string>
+    <string name="sms_send">短信已发送</string>
+    <string name="verification_failed">验证失败</string>
+    <string name="reset_account">重置账号</string>
+    <string name="reset_account_text">安全号码验证通过后即可成功修改。</string>
+    <string name="reset">重置</string>
+    <string name="some_info_empty">信息没有填写完整哦</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="password_empty_or_inconsistent">密码为空或不一致</string>
+    <string name="new_security_phone_num">新的安全手机号码</string>
+    <string name="reset_successful">账号重置成功</string>
+    <string name="login_num">你登录的手机号码</string>
+    <string name="exit">再按一次退出</string>
+    <string name="title_no_empty">标题不能为空</string>
+    <string name="about">关于</string>
+    <string name="check_update">检查更新</string>
+    <string name="release_notes">版本说明</string>
+    <string name="version_Information">版本信息</string>
+    <string name="service_agreement">服务协议</string>
+    <string name="automatically_update">自动下载更新</string>
+    <string name="latest_version">已是最新版</string>
+    <string name="detected_latest_version">检测到最新版</string>
+    <string name="only_wifi">仅WiFi网络</string>
+    <string name="never">从不</string>
+    <string name="automatic_download">自动下载ECure安装包</string>
+    <string name="version">版本号</string>
+    <string name="version_name">版本名称</string>
+    <string name="release_notes1">EasyCure版本1已上线。便捷的药品购物商店，健康文章相关资讯，
+        良好的健康计划推荐，优秀的医院、药店定位服务是本产品的最大特色，同时软件支持英文版本服务，
+        方便会英语人士的使用。</string>
+    <string name="ec_service_agreement">EasyCure服务协议</string>
+    <string name="service_agreement1">1.ECure服务协议的确认</string>
+    <string name="service_agreement2">2.ECure服务相关定义</string>
+    <string name="service_agreement3">3.ECure为您提供的服务内容</string>
+    <string name="service_agreement4">4.ECure账户注册、使用和注销</string>
+    <string name="service_agreement5">5.使用ECure服务的注意事项</string>
+    <string name="service_agreement6">6.用户合法使用ECure服务的承诺</string>
+    <string name="service_agreement7">7.用户权益保障及信息保护</string>
+    <string name="service_agreement8">8.不可抗力、免责及责任限制</string>
+    <string name="service_agreement9">9.知识产权的保护</string>
+    <string name="service_agreement_foreword">感谢您选择ECure服务。ECure服务协议（以下简称本协议）
+        由ECure团队（以下简称我们）和您签订</string>
+    <string name="service_agreement1_content">1、请您先仔细阅读本协议内容，如您对本协议内容或页面提示信息有疑问，请勿进行下一步操作。
+    您可通过添加ECure官方QQ：844964206进行咨询，以便我们为您解释和说明。您通过页面点击或其他方式确认即表示您已同意本协议。\n
+    2、如我们对本协议进行修改，我们将通过弹窗的方式予以通知。若您无法同意变更修改后的协议内容，您有权停止使用相关服务；双方协商一致的，
+        也可另行变更相关服务和对应协议内容。\n
+    3、如您为无民事行为能力人或为限制民事行为能力人，请告知您的监护人，并在您的监护人的指导下阅读本协议和使用我们的服务。若您非中华人民共和国
+        境内（为本协议之目的，不包括香港、澳门特别行政区及台湾地区）用户，您还需同时遵守您所属国家或地区的法律，切您确认，订立并
+        旅行本协议不违反您所属、所居住或开展经营活动或其他业务的国家或地区的法律法规。</string>
+    <string name="service_agreement2_content">1、ECure账户（或称"账户"）：指您获得ECure登录账号且通过手机验证后取得的供您使用ECure服务的账户。\n
+    2、ECure登录账号：指您注册ECure账号过程中接收验证码的手机号，这个手机号将作为您的ECure账号的登录账号。\n
+    3、身份要素：指我们用于识别您身份的信息要素，目前暂时只支持手机短信验证码验证。\n
+    4、昵称：指您对外公开的账号名称，我们对用户的账号（即手机号）做保密处理，即不对外公开手机号。\n
+    5、官方QQ：844964206</string>
+    <string name="service_agreement3_content">1、支付：用户选购完药品后即可进入支付环节，目前暂时只支持微信、支付宝两种方式支付。\n
+    2、药品选购：我们针对用户选择的基本病症推荐几款销量和热度较高的药品，但仅仅只是做筛选而已，这个功能所筛选出来的药品只能当做用户
+        选择基本病症的参考药物， 如病情严重者不作为本服务的服务对象，并强烈建议您及时到医院就医。\n
+    3、健康资讯：我们将定期更新健康资讯模块，保证用户能够从文章中了解到一些生活中的健康小常识，并以定期更新的方式保持用户对健康资讯的新鲜感。\n
+    4、健康常识：我们将针对身体主要部位或一些生活习惯等提出建议，并让用户了解到怎么做好健康保养，从而养成一种良好的生活习惯。\n
+    5、备忘录：软件中提供了备忘录功能，让用户在软件中写下备忘内容，当用户再次使用软件的时候将关注到之前记录下的备忘信息。\n
+    6、定位：我们采用的是高德地图的定位系统，为用户提供周围医院、药店的定位服务。\n
+    7、国际化：软件提供中文、英文双语支持服务，根据用户手机时区来自动选择显示语种。</string>
+    <string name="service_agreement4_content">1、注册：完成注册后即可使用所有服务。您在账号中所设置的昵称将作为对外可见的信息，而您的手机号码
+        （即登录账号）我们将对外进行保密。\n
+        2、登录：我们只提供本平台登录（即本平台注册用户）或第三方平台（QQ、微信）登录。\n
+        3、使用：身份要素使我们识别您身份的依据，请您务必妥善保管。使用身份要素进行的操作、发出的指令视为您本人做出。因您的原因造成的账户、密码
+        等信息被冒用、盗用或非法使用，由此引起的风险和损失需要由您自行承担。\n
+        4、注销：您只能申请注销您本人的账户，并依照我们的流程进行注销。为了维护您和其他用户的合法利益，您申请注销的账户，应该不存在未了结的权利义务
+        或其他因为注销该账户会产生纠纷的情况，不存在未完结交易。</string>
+    <string name="service_agreement5_content">1、身份验证：在身份验证过程中请保持网络环境畅通，并保证网络环境安全的情况下进行登录和支付操作。\n
+    2、自主选购：我们提供药品商店供用户在选择合适病症之后向用户展示相关销量高、热度高、口碑好的药品。但这仅仅是作为推荐，只能作为参考项。如果
+    用户确实能够确定自己的病症如：咳嗽等常见症状的话可以参考药品推荐的结果购买药物，反之如果用户不确定具体病症且病情较为严重的情况下则不作为
+    本功能的服务对象，并强烈建议用户及时到医院就医。\n
+    3、支付：我们提供了专业的支付接口（支付宝支付、微信支付）并让用户能够在选购药品之后对药品进行支付操作，流程与普通网购一致。\n</string>
+    <string name="service_agreement6_content">1、您需要遵守中华人民共和国相关法律法规及您所属、所居住或开展经营活动或其他业务的国家或地区
+    的法律法规，不得将我们的服务用于非法目的（包括用于禁止或限制交易物品的交易），也不得以非法方式使用我们的服务。\n
+    2、您不得利用我们的服务从事侵害他人合法权益之行为或违反国家法律法规，否则我们有权进行调查、延迟或拒绝结算或停止提供服务，且您需要自行承担相关
+    法律责任，如因此导致我们或其他方受损的，您需要承担赔偿责任。</string>
+    <string name="service_agreement7_content">我们一直秉承"客户第一"的原则，努力为您带来微小而美好的改变。我们重视对您信息的保护，并严格实行信息
+    安全保护制度，保障您的用户数据不会泄露，为您创造良好的网络环境，提升您的用户体验。</string>
+    <string name="service_agreement8_content">免责条款\n因下列原因导致我们无法正常提供服务，我们免于承担责任：\n1、我们的系统停机维护或升级；\n
+    2、因台风、地震、洪水、雷电或恐怖袭击等不可抗力原因；\n
+    3、您的设备硬件和通信线路、供电线路出现故障等；\n
+    4、因您操作不当或通过非经我们授权或认可的方式使用我们服务等；\n
+    5、因病毒、木马、恶意程序攻击、网络拥堵、系统不稳定、系统或设备故障、通讯故障、电力故障、银行原因、第三方服务瑕疵或政府行为等原因。\n
+    尽管有前款约定，我们将采取合理行动积极促使服务恢复正常。\n\n
+    责任限制\n我们可能同时为您及您的（交易）对手方提供服务，您同意对我们可能存在的该等行为予以明确豁免任何实际或潜在的利益冲突，并不得以此
+    来主张我们在提供服务时存在法律上的瑕疵。</string>
+    <string name="service_agreement9_content">1、非经我们书面同意，请勿擅自使用、修改、反编译、复制、公开传播、改变、散布、发型或公开
+    发表ECure程序或内容；\n2、尊重知识产权还是您应尽的义务，如有违反，您需要承担损害赔偿责任。</string>
+
+    <string name="security_setting_title">你可以选择任意一项进行填写，保存修改之后将立即生效。</string>
+    <string name="unmodified_content">没有更改的内容</string>
+    <string name="problem_help">问题求助</string>
+    <string name="customer_service">前往我的客服</string>
+    <string name="feedback">意见反馈</string>
+    <string name="abnormal_function_suggest">功能异常或建议</string>
+    <string name="choose_feedback_type">选择你的反馈类型</string>
+    <string name="my_customer_service">我的客服</string>
+    <string name="content_customized">已为您定制如下内容</string>
+    <string name="your_problem">猜你问题</string>
+    <string name="modify_security_num">如何修改安全手机号</string>
+    <string name="modify_secret_issus">如何修改密保问题</string>
+    <string name="modify_phone_num">如何更改绑定的手机号</string>
+    <string name="use_shopping_store">如何使用购物商店</string>
+    <string name="use_location_services">如何正确使用定位服务</string>
+    <string name="commit">提交</string>
+    <string name="feedback_content">（必选）请选择你想反馈的问题点</string>
+    <string name="questions_and_opinions">请详细补充问题和意见</string>
+    <string name="abnormal_function_fbi">功能异常：功能故障或不可用</string>
+    <string name="product_suggestion_fbi">产品建议：用的不爽，我有建议</string>
+    <string name="security_issues_fbi">安全问题：密码，隐私，欺诈等</string>
+    <string name="other_problems_fbi">其他问题</string>
+    <string name="input_more_than_10_chars">请输入不少于10个字的描述</string>
+    <string name="choose_feedback_issue">请选择你要反馈的问题点</string>
+    <string name="input_length">最少输入10个字符</string>
+    <string name="welcome_back">欢迎回来</string>
+    <string name="finish">完成</string>
+    <string name="clear">清空</string>
+    <string name="hospital">医 院</string>
+    <string name="drugstore">药 店</string>
+    <string name="sign_up_big">注册</string>
+    <string name="about_us_big">关于我们</string>
+    <string name="contact_big">备忘录</string>
+    <string name="where_big">定位</string>
+    <string name="easy_cure">Easy Cure</string>
+    <string name="schedule_big">计划表</string>
+    <string name="illness_selection">病症选择</string>
+    <string name="illness_selection_title">病症选择</string>
+    <string name="illness">病症</string>
+    <string name="positioning">我在哪儿</string>
+    <string name="query_disease">查询病症</string>
+    <string name="history_record">历史记录</string>
+    <string name="network_anomaly">网络跑到火星去啦</string>
+    <string name="reload">重新加载</string>
+    <string name="article_lose">啊喔，文章找不到了</string>
+    <string name="data_getting">数据加载中，请稍后</string>
+    <string name="checking_network">正在检查网络</string>
+</resources>

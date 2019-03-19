@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginBottom="@dimen/h8"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_advice_iv"
+            android:layout_width="@dimen/w25"
+            android:layout_height="@dimen/h18"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/activity_advice_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="abc"
+                android:textSize="25sp"></TextView>
+
+            <am.widget.wraplayout.WrapLayout
+                android:id="@+id/wly_lyt_warp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:wlyHorizontalSpacing="5dp"
+                app:wlyVerticalSpacing="5dp"
+                app:wlyGravity="top">
+                <TextView
+                    android:id="@+id/activity_advice_tv_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    ></TextView>
+            </am.widget.wraplayout.WrapLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

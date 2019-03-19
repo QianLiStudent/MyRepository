@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h12"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_help_iv1"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            android:textSize="@dimen/h15"
+            android:layout_toRightOf="@id/activity_help_iv1"
+            android:layout_marginLeft="@dimen/w6"></TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_feedback_type"
+        android:textSize="@dimen/h8"
+        android:alpha="0.6"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w10"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@color/colorGray1"></TextView>
+
+    <ListView
+        android:id="@+id/activity_help_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/w5"
+        android:paddingRight="@dimen/w5"
+        android:scrollbars="none"
+        android:background="@color/colorWhite"></ListView>
+
+</LinearLayout>

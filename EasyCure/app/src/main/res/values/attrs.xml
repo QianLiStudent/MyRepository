@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FeedbackItem">
+        <attr name="text" format="string"/>
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="Tag">
+        <attr name="tag_text" format="string" />
+        <attr name="tag_textSize" format="integer"/>
+        <attr name="tag_textColor" format="string"/>
+        <attr name="tag_bgcolor" format="string"/>
+        <attr name="tag_checked" format="boolean"/>
+    </declare-styleable>
+</resources>

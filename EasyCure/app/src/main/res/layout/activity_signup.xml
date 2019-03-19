@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#31303e">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id='@+id/activity_login_iv'
+            android:layout_width="@dimen/w120"
+            android:layout_height="@dimen/h100"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/activity_main_img"
+            ></ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/w20"
+        android:paddingRight="@dimen/w20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/w40"
+                android:layout_height="@dimen/h33"
+                android:background="@drawable/iv_radius"
+                android:src="@mipmap/icon_login_user"></ImageView>
+
+            <EditText
+                android:id="@+id/activity_signup_et_userName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h33"
+                android:background="@drawable/et_focus_state"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:textSize="@dimen/h11"
+                android:paddingLeft="@dimen/w10"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h12"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/w40"
+                android:layout_height="@dimen/h33"
+                android:background="@drawable/iv_radius"
+                android:src="@mipmap/icon_login_pwd"></ImageView>
+
+            <EditText
+                android:id="@+id/activity_signup_et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h33"
+                android:background="@drawable/et_focus_state"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textSize="@dimen/h11"
+                android:paddingLeft="@dimen/w10"></EditText>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/activity_signup_btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textColor="#fff"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h60"
+                android:background="@drawable/btn_press_state"></Button>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

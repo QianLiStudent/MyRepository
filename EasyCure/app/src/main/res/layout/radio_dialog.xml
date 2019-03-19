@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/h15"
+    android:paddingLeft="@dimen/w12"
+    android:paddingRight="@dimen/w12">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w10">
+
+        <TextView
+            android:id="@+id/radio_dialog_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automatic_download"
+            android:textSize="@dimen/h16"></TextView>
+
+        <RadioGroup
+            android:id="@+id/radio_dialog_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/h10"
+            android:layout_below="@id/radio_dialog_tv">
+            <RadioButton
+                android:id="@+id/radio_dialog_rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/only_wifi"
+                android:textSize="@dimen/h13"></RadioButton>
+            <RadioButton
+                android:id="@+id/radio_dialog_rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/never"
+                android:textSize="@dimen/h13"
+                android:layout_marginTop="@dimen/h5"></RadioButton>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/radio_dialog_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height='wrap_content'
+            android:text="@string/cancel"
+            android:textSize="@dimen/h12"
+            android:textColor="@color/colorBlue"
+            android:background="@color/colorWhite"
+            android:layout_below="@id/radio_dialog_rg"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/h15"
+            android:layout_marginRight="@dimen/w10"></TextView>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

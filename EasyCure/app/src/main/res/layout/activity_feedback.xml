@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h12"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_feedback_iv1"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback"
+            android:textSize="@dimen/h15"
+            android:layout_toRightOf="@id/activity_feedback_iv1"
+            android:layout_marginLeft="@dimen/w6"></TextView>
+
+        <TextView
+            android:id="@+id/activity_feedback_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commit"
+            android:textSize="@dimen/h13"
+            android:textColor="@color/tv_commit_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"></TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/feedback_content"
+        android:textSize="@dimen/h12"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w10"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@color/colorGray2"></TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/h6"
+                android:paddingLeft="@dimen/w10">
+
+                <CheckBox
+                    android:id="@+id/activity_feedback_cb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/abnormal_function_fbi"
+                    android:textSize="@dimen/h12"
+                    android:paddingLeft="@dimen/w10"
+                    android:layout_marginRight="@dimen/w10"
+                    ></CheckBox>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@id/activity_feedback_cb1"
+                    android:layout_marginTop="@dimen/h8"
+                    android:layout_marginRight="@dimen/w10"
+                    android:background="@color/colorBlack"></View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/h6"
+                android:paddingLeft="@dimen/w10">
+
+                <CheckBox
+                    android:id="@+id/activity_feedback_cb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_suggestion_fbi"
+                    android:textSize="@dimen/h12"
+                    android:paddingLeft="@dimen/w10"
+                    android:layout_marginRight="@dimen/w8"
+                    ></CheckBox>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@id/activity_feedback_cb2"
+                    android:layout_marginTop="@dimen/h8"
+                    android:layout_marginRight="@dimen/w10"
+                    android:background="@color/colorBlack"></View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/h6"
+                android:paddingLeft="@dimen/w10">
+
+                <CheckBox
+                    android:id="@+id/activity_feedback_cb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_issues_fbi"
+                    android:textSize="@dimen/h12"
+                    android:paddingLeft="@dimen/w10"
+                    android:layout_marginRight="@dimen/w10"
+                    ></CheckBox>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@id/activity_feedback_cb3"
+                    android:layout_marginTop="@dimen/h8"
+                    android:layout_marginRight="@dimen/w10"
+                    android:background="@color/colorBlack"></View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/h6"
+                android:paddingLeft="@dimen/w10">
+
+                <CheckBox
+                    android:id="@+id/activity_feedback_cb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_problems_fbi"
+                    android:textSize="@dimen/h12"
+                    android:paddingLeft="@dimen/w10"
+                    android:layout_marginBottom="@dimen/h8"
+                    ></CheckBox>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/questions_and_opinions"
+                android:textSize="@dimen/h12"
+                android:paddingTop="@dimen/h8"
+                android:paddingBottom="@dimen/h8"
+                android:paddingLeft="@dimen/w10"
+                android:background="@color/colorGray2"></TextView>
+
+            <EditText
+                android:id="@+id/activity_feedback_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h60"
+                android:hint="@string/input_more_than_10_chars"
+                android:textSize="@dimen/h12"
+                android:gravity="top"
+                android:maxLength="240"
+                android:maxLines="3"
+                android:inputType="textMultiLine"
+                android:paddingTop="@dimen/h8"
+                android:paddingLeft="@dimen/w10"
+                android:background="@drawable/et_no_border"></EditText>
+
+            <TextView
+                android:id="@+id/activity_feedback_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/240"
+                android:textSize="@dimen/h12"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/h5"
+                android:layout_marginRight="@dimen/w8"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h8"
+                android:background="@color/colorGray2"
+                android:layout_marginTop="@dimen/h5"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

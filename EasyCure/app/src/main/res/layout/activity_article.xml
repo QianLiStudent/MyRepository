@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginBottom="@dimen/h8"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_article_iv"
+            android:layout_width="@dimen/w25"
+            android:layout_height="@dimen/h18"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/activity_article_iv2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h150"
+                android:scaleType="fitXY"></ImageView>
+
+            <TextView
+                android:id="@+id/activity_article_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abc"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/h5"
+                android:layout_below="@id/activity_article_iv2"
+                android:layout_centerHorizontal="true"></TextView>
+
+            <TextView
+                android:id="@+id/activity_article_tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_below="@id/activity_article_tv_title"
+                android:layout_margin="@dimen/h20"></TextView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

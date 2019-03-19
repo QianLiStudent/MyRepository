@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <EditText
+        android:id="@+id/fragment_pharmapp_contact_et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/event_name"
+        android:textSize="@dimen/h13"
+        android:inputType="text"
+        android:maxLines="1"
+        android:maxLength="80"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w10"
+        android:background="@drawable/et_focus_state_contact"></EditText>
+
+    <EditText
+        android:id="@+id/fragment_pharmapp_contact_et2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/event"
+        android:textSize="@dimen/h13"
+        android:inputType="textMultiLine"
+        android:maxLength="160"
+        android:maxLines="5"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w10"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@drawable/et_focus_state_contact"></EditText>
+
+    <ListView
+        android:id="@+id/fragment_pharmapp_contact_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:background="#fff"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h50">
+        <Button
+            android:id="@+id/fragment_pharmapp_contact_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish"
+            android:textColor="#fff"
+            android:textSize="@dimen/h15"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:background="@drawable/btn_radius_press_state"
+            android:layout_marginLeft="@dimen/w15"
+            ></Button>
+
+        <Button
+            android:id="@+id/fragment_pharmapp_contact_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:textColor="#fff"
+            android:textSize="@dimen/h15"
+            android:paddingLeft="@dimen/w18"
+            android:paddingRight="@dimen/w19"
+            android:background="@drawable/fragment_pharmapp_contact_btn_clear"
+            android:layout_marginRight="@dimen/w15"
+            android:layout_alignParentRight="true"
+            ></Button>
+    </RelativeLayout>
+
+
+</LinearLayout>

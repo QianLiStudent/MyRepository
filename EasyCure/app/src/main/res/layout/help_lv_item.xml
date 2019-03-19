@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/w3"
+    android:paddingRight="@dimen/w3"
+    android:paddingTop="@dimen/h10"
+    android:paddingBottom="@dimen/h10">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/help_lv_item_iv1"
+            android:layout_width="@dimen/w35"
+            android:layout_height="@dimen/h25"
+            android:layout_marginLeft="@dimen/w5"></ImageView>
+
+        <TextView
+            android:id="@+id/help_lv_item_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h12"
+            android:layout_toRightOf="@id/help_lv_item_iv1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w15"></TextView>
+
+        <ImageView
+            android:id="@+id/help_lv_item_iv2"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:background="@mipmap/icon_back2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"></ImageView>
+
+        <TextView
+            android:id="@+id/help_lv_item_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h11"
+            android:alpha="0.3"
+            android:layout_marginRight="@dimen/w5"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/help_lv_item_iv2"></TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

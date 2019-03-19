@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15"
+        android:layout_marginBottom="@dimen/h5">
+        <ImageView
+            android:id="@+id/fragment_pharmapp_iv1"
+            android:layout_width="@dimen/w25"
+            android:layout_height="@dimen/h18"
+            android:background="@mipmap/icon_drawer"></ImageView>
+        <TextView
+            android:id="@+id/fragment_pharmapp_tv0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us"
+            android:textStyle="bold"
+            android:textSize="@dimen/h16"
+            android:layout_centerHorizontal="true"></TextView>
+
+        <ImageView
+            android:id="@+id/fragment_pharmapp_iv2"
+            android:layout_width="@dimen/w45"
+            android:layout_height="@dimen/h45"
+            android:background="@mipmap/fragment_aboutus_communicate"
+            android:layout_below="@id/fragment_pharmapp_iv1"
+            android:layout_marginTop="@dimen/h5"
+            android:layout_marginLeft="@dimen/w15"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height='wrap_content'
+            android:text="@string/easy_cure"
+            android:textStyle="bold"
+            android:textSize="@dimen/h22"
+            android:layout_below="@id/fragment_pharmapp_iv2"
+            android:layout_marginTop="@dimen/h5"
+            android:layout_marginLeft="@dimen/w15"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h38"
+        android:layout_marginLeft="@dimen/w15"
+        android:paddingTop="@dimen/h10"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="@dimen/w90"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/w10"
+            android:paddingRight="@dimen/w10"
+            >
+            <TextView
+                android:id="@+id/fragment_pharmapp_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                android:textSize="@dimen/h13"
+                android:textColor="#034fce"
+                android:textStyle="bold"
+                ></TextView>
+            <View
+                android:id="@+id/fragment_pharmapp_v1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h3"
+                android:background="#034fce"
+                android:layout_alignParentBottom="true"
+                ></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/w83"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/w10"
+            android:paddingRight="@dimen/w10"
+            >
+            <TextView
+                android:id="@+id/fragment_pharmapp_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:textSize="@dimen/h13"
+                android:textStyle="bold"
+                ></TextView>
+            <View
+                android:id="@+id/fragment_pharmapp_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h3"
+                android:background="#fff"
+                android:layout_alignParentBottom="true"
+                ></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/w83"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/w10"
+            android:paddingRight="@dimen/w10"
+            >
+            <TextView
+                android:id="@+id/fragment_pharmapp_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where"
+                android:textSize="@dimen/h13"
+                android:textStyle="bold"
+                ></TextView>
+            <View
+                android:id="@+id/fragment_pharmapp_v3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h3"
+                android:background="#fff"
+                android:layout_alignParentBottom="true"
+                ></View>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h10"
+        android:layout_marginTop="@dimen/h1"
+        android:background="#F2F2F2"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/h5"
+        android:layout_marginLeft="@dimen/w15"
+        android:layout_marginRight="@dimen/w15"
+        android:orientation="vertical">
+
+       <FrameLayout
+           android:id="@+id/fragment_pharmapp_fl"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

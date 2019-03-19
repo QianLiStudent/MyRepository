@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_personal_iv"
+            android:layout_width="@dimen/w25"
+            android:layout_height="@dimen/h18"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine"
+            android:textStyle="bold"
+            android:textSize="@dimen/h18"
+            android:layout_centerInParent="true"></TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:textSize="@dimen/h22"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/w22"
+        android:layout_marginTop="@dimen/h10"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h10"
+        android:layout_marginTop="@dimen/h10"
+        android:background="#F2F2F2"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w10">
+        <ListView
+            android:id="@+id/activity_personal_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1dp" ></ListView>
+
+        <Button
+            android:id="@+id/activity_personal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:textSize="@dimen/h13"
+            android:textColor="@color/btn_sign_out_color"
+            android:layout_marginBottom="@dimen/h20"
+            android:background="@drawable/btn_press_state_signout"
+            android:layout_alignParentBottom="true"></Button>
+    </RelativeLayout>
+
+
+</LinearLayout>

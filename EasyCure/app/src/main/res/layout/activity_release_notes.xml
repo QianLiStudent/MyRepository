@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h15"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15"
+        android:layout_marginBottom="@dimen/h12">
+        <ImageView
+            android:id="@+id/activity_release_notes_iv1"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/release_notes"
+            android:textSize="@dimen/h15"
+            android:layout_toRightOf="@id/activity_release_notes_iv1"
+            android:layout_marginLeft="@dimen/w6"></TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity_release_notes_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_notes1"
+        android:textSize="@dimen/h13"
+        android:layout_marginLeft="@dimen/w20"
+        android:layout_marginRight="@dimen/w20"></TextView>
+
+</LinearLayout>

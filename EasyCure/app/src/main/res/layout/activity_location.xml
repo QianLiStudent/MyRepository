@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_location"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/activity_location_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hospital"
+        android:textSize="18sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/h10"
+        android:layout_marginRight="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:background="@drawable/btn_press_state"
+        android:visibility="gone"
+        ></Button>
+
+    <Button
+        android:id="@+id/activity_location_drugstore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drugstore"
+        android:textSize="18sp"
+        android:layout_below="@id/activity_location_hospital"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/h5"
+        android:layout_marginRight="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:background="@drawable/btn_press_state"
+        android:visibility="gone"
+        ></Button>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/activity_location_bmv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_puppet"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>
