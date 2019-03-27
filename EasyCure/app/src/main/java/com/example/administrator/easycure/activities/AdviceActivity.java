@@ -19,17 +19,6 @@ import android.widget.TextView;
 import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.BaseActivity;
 import com.example.administrator.easycure.utils.CacheUtil;
-import com.example.administrator.easycure.utils.LangGetUtil;
-import com.example.administrator.easycure.utils.RandomColor;
-import com.example.administrator.easycure.utils.RegexUtil;
-import com.example.administrator.easycure.utils.StrUtil;
-
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 

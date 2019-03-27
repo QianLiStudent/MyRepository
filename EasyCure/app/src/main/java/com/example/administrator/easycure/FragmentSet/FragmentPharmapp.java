@@ -15,8 +15,6 @@ import android.widget.TextView;
 import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.activities.DrawerActivity;
 
-import java.util.List;
-
 /**
  * Created by Administrator on 2018/10/20 0020.
  */

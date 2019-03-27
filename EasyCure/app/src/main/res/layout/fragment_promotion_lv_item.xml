@@ -10,14 +10,14 @@
         android:background="@drawable/fragment_promotion_lv_item_border">
         <ImageView
             android:id="@+id/fragment_promotion_lv_item_iv"
-            android:layout_width="@dimen/w138"
+            android:layout_width="@dimen/w145"
             android:layout_height="@dimen/h100"
             android:scaleType="fitXY"
             android:background="@mipmap/lv_item"></ImageView>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="@dimen/h12"
+            android:paddingTop="@dimen/h8"
             android:paddingBottom="@dimen/h10"
             android:paddingLeft="@dimen/w18"
             android:paddingRight="@dimen/w8">

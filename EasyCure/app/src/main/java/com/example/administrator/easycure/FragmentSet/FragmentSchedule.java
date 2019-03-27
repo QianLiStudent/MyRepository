@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,8 +23,6 @@ import com.example.administrator.easycure.activities.DrawerActivity;
 import com.example.administrator.easycure.adapters.FragmentScheduleRlvAdapter;
 import com.example.administrator.easycure.utils.Constant;
 import com.example.administrator.easycure.utils.DBControler;
-
-import org.litepal.LitePal;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -115,7 +115,6 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener,
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch(position){
             case 0:     //检测更新
-
                 break;
             case 1:     //版本说明
                 intent = new Intent(this,ReleaseNotesActivity.class);

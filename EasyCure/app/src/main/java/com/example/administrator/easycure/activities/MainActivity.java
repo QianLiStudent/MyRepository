@@ -6,6 +6,8 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +27,11 @@ import android.widget.Toast;
 
 import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.BaseActivity;
+import com.example.administrator.easycure.utils.CacheUtil;
 import com.example.administrator.easycure.utils.Constant;
+import com.example.administrator.easycure.utils.LangGetUtil;
+import com.example.administrator.easycure.utils.NetworkUsable;
+import com.example.administrator.easycure.utils.RegexUtil;
 import com.example.administrator.easycure.utils.SpUtil;
 import com.example.administrator.easycure.utils.StrUtil;
 import com.example.administrator.easycure.utils.WiFiConnectChecked;
@@ -38,9 +45,13 @@ import org.xutils.x;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
@@ -95,7 +106,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         }
     };
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -140,7 +150,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         //检查安装权限
         if(Build.VERSION.SDK_INT >= 26){
             if(!getPackageManager().canRequestPackageInstalls()){
-                Toast.makeText(this,"请先授予安装权限",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"请先授予安装权限，以便软件更新安装",Toast.LENGTH_SHORT).show();
                 //表示用户依然没有给安装权限，这时候我们跳到权限设置界面让用户设置
                 Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageURI);
                 startActivityForResult(intent,PERMISSION_REQUEST_INSTALL);
@@ -176,7 +186,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
                 try {
                     //这个URL地址是开发人员给的，因此绝不会出错，所以不需要考虑找不到的情况
-                    URL url = new URL("http://192.168.191.1:80/phpWorkspace/ECure-system/public/versionInfo.json");
+                    URL url = new URL("http://119.23.208.63/ECure-system/public/data.json");
 
                     HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                     httpURLConnection.setRequestMethod("GET");
@@ -215,6 +225,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                             SpUtil.saveUpdateStatus(MainActivity.this,true);
                         }
                     }
+                    handler.sendMessage(message);
                 } catch (MalformedURLException e) {
                     message.what = URL_ERROR;
                     e.printStackTrace();
@@ -225,7 +236,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                     message.what = JSON_ERROR;
                     e.printStackTrace();
                 }
-                handler.sendMessage(message);
             }
         }).start();
     }
@@ -243,7 +253,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                         if(file != null && file.length() > 0){
                             file.delete();
                         }
-
                         //开始下载apk
                         downloadApk();
                         dialog.dismiss();
@@ -296,7 +305,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                     if(mProgressDialog != null && mProgressDialog.isShowing()){
                         mProgressDialog.dismiss();
                     }
-                    Toast.makeText(MainActivity.this,"下载失败，请检查网络或app权限",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"下载失败，请检查网络或app权限",Toast.LENGTH_LONG).show();
                 }
 
                 @Override
@@ -333,7 +342,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 }
             });
         }else{
-            Toast.makeText(this,"请检查SD是否插入",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"请检查SD卡是否插入",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -408,13 +417,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.activity_main_illness_selection:
-                //切换到商品界面
+                //切换到病症选择界面
                 intent = new Intent(this,DrawerActivity.class);
                 intent.putExtra("itemId",1);
                 startActivity(intent);
                 break;
-            case R.id.activity_main_rl_health_information:
-                //切换到健康资讯模块
+            case R.id.activity_main_rl_health_information:  //切换到健康资讯模块
                 intent = new Intent(this,DrawerActivity.class);
                 intent.putExtra("itemId",2);
                 startActivity(intent);

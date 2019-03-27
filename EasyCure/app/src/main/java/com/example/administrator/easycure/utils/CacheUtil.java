@@ -3,6 +3,7 @@ package com.example.administrator.easycure.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -211,5 +212,35 @@ public class CacheUtil {
             }
         }
         return results;
+    }
+
+    //清除缓存数据
+    public static boolean clearCache(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = clearCache(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+        }
+        return dir.delete();
+    }
+
+    //清空内部缓存（data/data/.../cache)
+    public static void deleteFilesByDirectory(File directory) {
+        if (directory != null && directory.exists() && directory.isDirectory()) {
+            for (File item : directory.listFiles()) {
+                item.delete();
+            }
+        }
+    }
+    //清空外部缓存（sdcard...)
+    public static void cleanExternalCache(Context context) {
+        if (Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED)) {
+            deleteFilesByDirectory(context.getExternalCacheDir());
+        }
     }
 }

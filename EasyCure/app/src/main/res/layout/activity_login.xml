@@ -68,7 +68,7 @@
                 android:id="@+id/activity_login_et_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/h33"
-                android:hint="@string/password"
+                android:hint="@string/password_pro"
                 android:textSize="@dimen/h11"
                 android:paddingLeft="@dimen/w10"
                 android:inputType="textPassword"
@@ -80,8 +80,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/activity_login_tv_forgotPwd"
                 android:layout_width="wrap_content"
@@ -93,6 +92,15 @@
                 android:layout_marginBottom="@dimen/h15"
                 android:layout_alignParentRight="true"
                 ></TextView>
+            <CheckBox
+                android:id="@+id/activity_login_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/is_remember_pwd"
+                android:textColor="#4889c9"
+                android:textSize="@dimen/h10"></CheckBox>
+
         </RelativeLayout>
 
         <Button

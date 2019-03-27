@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="甜筒"
-        android:textSize="@dimen/h15"
+        android:textSize="@dimen/h13"
         android:paddingTop="@dimen/h5"
         android:paddingBottom="@dimen/h5"
-        android:paddingLeft="@dimen/w10"
+        android:gravity="center_horizontal"
         ></TextView>
 
     <TextView
@@ -23,9 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="甜筒"
-        android:textSize="@dimen/h15"
+        android:textSize="@dimen/h10"
         android:paddingTop="@dimen/h5"
         android:paddingBottom="@dimen/h5"
+        android:gravity="center_horizontal"
         ></TextView>
 
 </LinearLayout>

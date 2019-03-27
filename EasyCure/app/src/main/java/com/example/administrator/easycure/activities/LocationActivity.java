@@ -70,12 +70,9 @@ import com.baidu.mapapi.search.poi.PoiSearch;
 import com.baidu.mapapi.search.poi.PoiSortType;
 import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.overlayutil.*;
-import com.mob.tools.utils.LocationHelper;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class LocationActivity extends AppCompatActivity implements View.OnClickListener,OnGetGeoCoderResultListener {
 
@@ -98,7 +95,6 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
     private GeoCoder mSearch;   //经纬度转详细地址
     private InfoWindow mInfoWindow;
     private BitmapDescriptor mBitmapDescriptor;
-//    private MyLocationConfiguration.LocationMode locationMode = MyLocationConfiguration.LocationMode.COMPASS;    //罗盘模式
 
     //onCreate中调用揭露动画
     private View content;//根布局对象（用来控制整个布局）
@@ -115,7 +111,6 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
 
         content = findViewById(R.id.activity_location);
         mPuppet = findViewById(R.id.view_puppet);
-//        mPuppet.bringToFront();
 
         //动画需要依赖于某个视图才可启动，
         // 这里依赖于根布局对象，并且开辟一个子线程，充分利用资源
@@ -180,7 +175,6 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
         animator.setDuration(660);
         animator.setInterpolator(new AccelerateDecelerateInterpolator());
         //判断标志位reversed，true则为添加返回键版动画监听器，false则为跳转动画开启版
-        // if (!reversed)
         animator.addListener(animatorListener1);
         return animator;
     }
@@ -426,58 +420,4 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
             default:
         }
     }
-
-
-
-//    @Override
-//    private void onBackPressed() {
-//        //动画需要依赖于某个视图才可启动，
-//        // 这里依赖于根布局对象，并且开辟一个子线程，充分利用资源
-//        activity_location_bmv.setVisibility(View.INVISIBLE);
-//        content.post(new Runnable() {
-//            @Override
-//            private void run() {
-//                mX = getIntent().getIntExtra("cx", 0);
-//                mY = getIntent().getIntExtra("cy", 0);
-//                Animator animator = createRevealAnimator1(mX, mY);
-//                animator.start();
-//            }
-//        });
-//    }
-
-    ////////////////////////////
-//    private Animator createRevealAnimator1(int x, int y) {
-//        float startRadius = (float) Math.hypot(content.getHeight(), content.getWidth());
-//        float endRadius = 0;
-//
-//        //注意揭露动画开启时是用根布局作为操作对象，关闭时用揭露层作为操作对象
-//        Animator animator = ViewAnimationUtils.createCircularReveal(
-//                mPuppet, x, y,
-//                startRadius,
-//                endRadius);
-//        animator.setDuration(500);
-//        animator.setInterpolator(new AccelerateDecelerateInterpolator());//设置插值器
-//        animator.addListener(animatorListener0);
-//        return animator;
-//    }
-
-    //定义动画状态监听器_按下返回键版
-//    private Animator.AnimatorListener animatorListener0 = new Animator.AnimatorListener() {
-//        @Override
-//        private void onAnimationStart(Animator animation) {
-//            mPuppet.setVisibility(View.VISIBLE);//按下返回键时，动画开启，揭露层设置为可见
-//        }
-//        @Override
-//        private void onAnimationEnd(Animator animation) {
-//            mPuppet.setVisibility(View.INVISIBLE);
-//
-//            finish();
-//        }
-//        @Override
-//        private void onAnimationCancel(Animator animation) {
-//        }
-//        @Override
-//        private void onAnimationRepeat(Animator animation) {
-//        }
-//    };
 }

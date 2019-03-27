@@ -3,6 +3,8 @@ package com.example.administrator.easycure.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -18,40 +20,67 @@ import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.BaseActivity;
 import com.example.administrator.easycure.utils.Constant;
 import com.example.administrator.easycure.utils.DBControler;
+import com.example.administrator.easycure.utils.LangGetUtil;
 import com.example.administrator.easycure.utils.SpUtil;
+import com.example.administrator.easycure.utils.StrUtil;
 
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
+import cn.smssdk.utils.SPHelper;
 
 /**
  * Created by Administrator on 2018/10/27 0027.
  */
 
-public class ResetAccountActivity extends BaseActivity implements View.OnClickListener,AdapterView.OnItemSelectedListener{
+public class ResetAccountActivity extends BaseActivity implements View.OnClickListener{
 
     private ImageView activity_reset_password_iv;
     private Button activity_reset_password_btn1,activity_reset_password_btn2;
     private EditText activity_reset_password_etu,activity_reset_password_etpwd1,activity_reset_password_etpwd2,
-            activity_reset_password_et1,activity_reset_password_et2,activity_reset_password_et3,
-            activity_reset_password_et4,activity_reset_password_et5;
-    private Spinner activity_reset_password_sp1,activity_reset_password_sp2,activity_reset_password_sp3;
-
-    private ArrayAdapter arrayAdapter1;
-    private ArrayAdapter arrayAdapter2;
-    private ArrayAdapter arrayAdapter3;
+            activity_reset_password_et1,activity_reset_password_et2;
 
     private EventHandler eh;
 
     private EasyCureTimer timer;
 
+    private String data = "";
+
+    private String message = "";
+
     private Intent intent;
 
-    private String securityQuestion1 = "";
-    private String securityQuestion2 = "";
-    private String securityQuestion3 = "";
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            Toast.makeText(ResetAccountActivity.this,message,Toast.LENGTH_SHORT).show();
+
+            switch(msg.what){
+                case 0:
+
+                    SpUtil.removePassword(ResetAccountActivity.this);
+                    SpUtil.saveRememberPasswordState(ResetAccountActivity.this,false);
+
+                    Intent intent = new Intent(ResetAccountActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+            }
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +88,6 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
 
         init();
 
-        initData();
     }
 
     public void init(){
@@ -76,37 +104,10 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
         activity_reset_password_etpwd2 = (EditText)findViewById(R.id.activity_reset_password_etpwd2);
         activity_reset_password_et1 = (EditText)findViewById(R.id.activity_reset_password_et1);
         activity_reset_password_et2 = (EditText)findViewById(R.id.activity_reset_password_et2);
-        activity_reset_password_et3 = (EditText)findViewById(R.id.activity_reset_password_et3);
-        activity_reset_password_et4 = (EditText)findViewById(R.id.activity_reset_password_et4);
-        activity_reset_password_et5 = (EditText)findViewById(R.id.activity_reset_password_et5);
-
-        activity_reset_password_sp1 = (Spinner)findViewById(R.id.activity_reset_password_sp1);
-        activity_reset_password_sp2 = (Spinner)findViewById(R.id.activity_reset_password_sp2);
-        activity_reset_password_sp3 = (Spinner)findViewById(R.id.activity_reset_password_sp3);
 
         activity_reset_password_iv.setOnClickListener(this);
         activity_reset_password_btn1.setOnClickListener(this);
         activity_reset_password_btn2.setOnClickListener(this);
-
-        arrayAdapter1 = new ArrayAdapter(this,R.layout.spinner_item,
-                getResources().getStringArray(R.array.security_question_array1));
-
-        arrayAdapter2 = new ArrayAdapter(this,R.layout.spinner_item,
-                getResources().getStringArray(R.array.security_question_array2));
-        arrayAdapter3 = new ArrayAdapter(this,R.layout.spinner_item,
-                getResources().getStringArray(R.array.security_question_array3));
-
-        arrayAdapter1.setDropDownViewResource(R.layout.spinner_item);
-        arrayAdapter2.setDropDownViewResource(R.layout.spinner_item);
-        arrayAdapter3.setDropDownViewResource(R.layout.spinner_item);
-
-        activity_reset_password_sp1.setAdapter(arrayAdapter1);
-        activity_reset_password_sp2.setAdapter(arrayAdapter2);
-        activity_reset_password_sp3.setAdapter(arrayAdapter3);
-
-        activity_reset_password_sp1.setOnItemSelectedListener(this);
-        activity_reset_password_sp2.setOnItemSelectedListener(this);
-        activity_reset_password_sp3.setOnItemSelectedListener(this);
 
         activity_reset_password_et2.addTextChangedListener(new TextWatcher() {
             @Override
@@ -130,34 +131,14 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
 
     }
 
-    public void initData(){
-        securityQuestion1 = getResources().getStringArray(R.array.security_question_array1)[0];
-        securityQuestion2 = getResources().getStringArray(R.array.security_question_array2)[0];
-        securityQuestion3 = getResources().getStringArray(R.array.security_question_array3)[0];
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch(parent.getId()){
-            case R.id.activity_security_settings_sp1:
-                securityQuestion1 = parent.getItemAtPosition(position).toString().trim();
-                break;
-            case R.id.activity_security_settings_sp2:
-                securityQuestion2 = parent.getItemAtPosition(position).toString().trim();
-                break;
-            case R.id.activity_security_settings_sp3:
-                securityQuestion3 = parent.getItemAtPosition(position).toString().trim();
-                break;
-        }
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
     @Override
     public void onClick(View v) {
+
+        String security_phone_number = activity_reset_password_et1.getText().toString().trim();
+        String pwd_et1 = activity_reset_password_etpwd1.getText().toString().trim();
+        String pwd_et2 = activity_reset_password_etpwd2.getText().toString().trim();
+        String username = activity_reset_password_etu.getText().toString().trim();
+
         switch(v.getId()){
             //返回上一界面
             case R.id.activity_reset_password_iv:
@@ -166,50 +147,50 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
 
             //发送验证码
             case R.id.activity_reset_password_btn1:
-                if(activity_reset_password_et1.getText().toString().trim().length() > 0){
+                if(security_phone_number.length() > 0){
+                    Pattern pattern = Pattern.compile("^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\\d{8}$");
+                    Matcher matcher = pattern.matcher(security_phone_number);
+
+                    if(matcher.find()){
                         Toast.makeText(this,getResources().getString(R.string.sms_send),Toast.LENGTH_SHORT).show();
+                        SpUtil.saveUserInfoTmp(this,"securityPhoneNumberTmp",security_phone_number);
                         sendSmsCheckCode();
+                    }else{
+                        Toast.makeText(this,getResources().getString(R.string.phone_num_format_error),Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Toast.makeText(this,getResources().getString(R.string.phone_number_not_empty),Toast.LENGTH_SHORT).show();
                 }
                 break;
-
             //点击下一步进入重置密码界面
             case R.id.activity_reset_password_btn2:
-                if(activity_reset_password_et1.getText().toString().trim().length() > 0){
+                if(security_phone_number.length() > 0){
                         //这里要先判断验证码是否验证成功，若成功则把所有的数据更新到数据库中
                         if((!activity_reset_password_et2.isEnabled())){
-                            if(activity_reset_password_etpwd1.getText().toString().trim().equals(
-                                    activity_reset_password_etpwd2.getText().toString().trim()) &&
-                                    activity_reset_password_etpwd1.getText().toString().trim().length() >= 6){
-                                if(activity_reset_password_etu.getText().toString().trim().length() > 0 &&
-                                        activity_reset_password_et3.getText().toString().trim().length() > 0 &&
-                                        activity_reset_password_et4.getText().toString().trim().length() > 0 &&
-                                        activity_reset_password_et5.getText().toString().trim().length() > 0){
+                            if(pwd_et1.equals(pwd_et2) && (pwd_et1.length() >= 6 && pwd_et1.length() <= 13)){
+                                if(username.length() > 0 ){
                                     Map<String,String> map = new HashMap<>();
-                                    map.put(Constant.USERNAME,activity_reset_password_etu.getText().toString().trim());
-                                    map.put(Constant.PASSWORD,activity_reset_password_etpwd1.getText().toString().trim());
-                                    map.put(Constant.SECURITY_NUMBER,activity_reset_password_et1.getText().toString().trim());
-                                    map.put(Constant.SECURITY_QUESTION1,securityQuestion1);
-                                    map.put(Constant.SECURITY_QUESTION2,securityQuestion2);
-                                    map.put(Constant.SECURITY_QUESTION3,securityQuestion3);
-                                    map.put(Constant.SECURITY_ANSWER1,activity_reset_password_et3.getText().toString().trim());
-                                    map.put(Constant.SECURITY_ANSWER2,activity_reset_password_et4.getText().toString().trim());
-                                    map.put(Constant.SECURITY_ANSWER3,activity_reset_password_et5.getText().toString().trim());
+                                    map.put(Constant.PHONENUMBER,SpUtil.getPhonenumber(this));
+                                    map.put(Constant.USERNAME,username);
+                                    map.put(Constant.PASSWORD,pwd_et1);
+                                    map.put(Constant.SECURITY_NUMBER,security_phone_number);
 
-                                    //所有内容均正确填写，更新数据库
-                                    if(DBControler.updateAccountItem(intent.getStringExtra(Constant.PHONENUMBER),map)){
-                                        Toast.makeText(this,getResources().getString(R.string.reset_successful),Toast.LENGTH_SHORT).show();
-                                    }
-                                    SpUtil.saveUserInfo(this,activity_reset_password_etpwd1.getText().toString().trim(),intent.getStringExtra(Constant.PHONENUMBER));
+                                    updateUserInfoToServer(map);
+
+                                    SpUtil.saveAllUserInfo(this,SpUtil.getPhonenumber(this),pwd_et1,username);
 
                                     Intent intent = new Intent(this,LoginActivity.class);
                                     startActivity(intent);
                                 }else{
-                                    Toast.makeText(this,getResources().getString(R.string.some_info_empty),Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(this,getResources().getString(R.string.username_can_not_be_empty),Toast.LENGTH_SHORT).show();
                                 }
                             }else{
-                                Toast.makeText(this,getResources().getString(R.string.password_empty_or_inconsistent),Toast.LENGTH_SHORT).show();
+                                if(!(pwd_et1.length() >= 6 && pwd_et1.length() <= 13)){
+                                    Toast.makeText(this,getResources().getString(R.string.password_length),Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(this,getResources().getString(R.string.password_inconsistent),Toast.LENGTH_SHORT).show();
+                                }
+
                             }
 
                         }else{
@@ -242,6 +223,7 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
                                 activity_reset_password_btn1.setText(getResources().getString(R.string.check_successful));
                                 activity_reset_password_btn1.setEnabled(false);
                                 activity_reset_password_et2.setEnabled(false);
+                                activity_reset_password_et1.setEnabled(false);
                             }
                         });
                     }else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE){
@@ -254,30 +236,79 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
         };
         SMSSDK.registerEventHandler(eh); //注册短信回调
 
-        //这里默认只支持中国的手机号码
+        //这里默认只支持中国的手机号码，发送到目的手机号
         SMSSDK.getVerificationCode("86",activity_reset_password_et1.getText().toString().trim());
 
         timer = new EasyCureTimer(60000,1000);
         timer.start();
-
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(eh != null){
-            SMSSDK.unregisterEventHandler(eh);
-        }
+    public void updateUserInfoToServer(final Map<String,String> map){
+        new Thread(new Runnable() {
+
+            InputStream is;
+
+            @Override
+            public void run() {
+                String urlStr = "http://119.23.208.63/ECure-system/public/index.php/reset_all_user_info";
+
+                try{
+                    URL url = new URL(urlStr);
+
+                    HttpURLConnection con = (HttpURLConnection)url.openConnection();
+
+                    con.setRequestMethod("POST");
+                    con.setConnectTimeout(5000);
+
+                    data = "phonenumber=" + URLEncoder.encode(map.get(Constant.PHONENUMBER)) + "" +
+                            "&username=" + URLEncoder.encode(map.get(Constant.USERNAME)) + "" +
+                            "&password=" + URLEncoder.encode(map.get(Constant.PASSWORD)) + "" +
+                            "&security_number=" + URLEncoder.encode(map.get(Constant.SECURITY_NUMBER));
+
+                    con.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                    con.setRequestProperty("Content-Length",data.length() + "");
+
+                    con.setDoOutput(true);
+
+                    OutputStream os = con.getOutputStream();
+
+                    os.write(data.getBytes());
+
+                    int code = con.getResponseCode();
+
+                    if(code == 200){
+                        is = con.getInputStream();
+
+                        String jsonStr = StrUtil.stream2String(is);
+
+                        if (jsonStr.startsWith("\ufeff")) {
+                            jsonStr = jsonStr.substring(1);
+                        }
+
+                        JSONObject json = new JSONObject(jsonStr);
+
+                        message = json.getString("msg_" + LangGetUtil.langGet());
+
+                        Message msg = handler.obtainMessage();
+
+                        if(Integer.parseInt(json.getString("code")) == 200){
+                            msg.what = 0;
+
+                        }else{
+                            msg.what = 1;
+                        }
+
+                        handler.sendMessageDelayed(msg,10);
+                    }
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     class EasyCureTimer extends CountDownTimer {
-        /**
-         * @param millisInFuture    The number of millis in the future from the call
-         *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
-         *                          is called.
-         * @param countDownInterval The interval along the way to receive
-         *                          {@link #onTick(long)} callbacks.
-         */
+
         public EasyCureTimer(long millisInFuture, long countDownInterval) {
             super(millisInFuture, countDownInterval);
         }
@@ -293,4 +324,13 @@ public class ResetAccountActivity extends BaseActivity implements View.OnClickLi
             activity_reset_password_btn1.setText(getResources().getString(R.string.send));
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(eh != null){
+            SMSSDK.unregisterEventHandler(eh);
+        }
+    }
+
 }

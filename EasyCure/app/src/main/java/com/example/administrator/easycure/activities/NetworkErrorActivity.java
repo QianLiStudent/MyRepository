@@ -45,7 +45,6 @@ public class NetworkErrorActivity extends BaseActivity implements View.OnClickLi
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            System.out.println("倒是稍微执行以下啊");
             switch(msg.what){
                 case 0:
                     flag = 0;
@@ -126,7 +125,7 @@ public class NetworkErrorActivity extends BaseActivity implements View.OnClickLi
             public void run() {
                 try{
                     //这是我电脑在宿舍开wifi后的ip
-                    String strUrl = "http://192.168.191.1:80/phpWorkspace/ECure-system/public/index.php/article/get_articles/";
+                    String strUrl = "http://119.23.208.63/ECure-system/public/index.php/get_articles/";
 
                     URL url = new URL(strUrl + lang + "/" + count);
 
@@ -139,6 +138,10 @@ public class NetworkErrorActivity extends BaseActivity implements View.OnClickLi
                     if(code == 200){
                         is = con.getInputStream();
                         String jsonStr = StrUtil.stream2String(is);
+
+                        if (jsonStr.startsWith("\ufeff")) {
+                            jsonStr = jsonStr.substring(1);
+                        }
 
                         jsonStr = jsonStr.replace("[","").replace("]","");
 
@@ -207,7 +210,7 @@ public class NetworkErrorActivity extends BaseActivity implements View.OnClickLi
             public void run() {
                 try{
                     //这是我电脑在宿舍开wifi后的ip
-                    String strUrl = "http://192.168.191.1:80/phpWorkspace/ECure-system/public/index.php/advice/get_advice/";
+                    String strUrl = "http://119.23.208.63/ECure-system/public/index.php/get_advice/";
 
                     URL url = new URL(strUrl + lang + "/" + count);
 

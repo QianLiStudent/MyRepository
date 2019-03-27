@@ -174,7 +174,7 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 
         map = new HashMap<>();
         map.put("img",R.mipmap.fragment_shop_img);
-        map.put("title",getResources().getString(R.string.shop));
+        map.put("title",getResources().getString(R.string.disease_diagnosis));
         list.add(map);
 
         map = new HashMap<>();

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_case_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/h10"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5"
+                android:layout_marginTop="@dimen/h10"
+                app:cardCornerRadius="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/activity_case_show_id_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/case_username"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w8"
+                        android:layout_marginTop="@dimen/h3"
+                        android:layout_toRightOf="@id/activity_case_show_id_label"
+                        android:text="Mike"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_id_label"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/illness_name"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_id_label"
+                        android:layout_marginLeft="@dimen/w8"
+                        android:layout_marginTop="@dimen/h3"
+                        android:layout_toRightOf='@id/activity_case_show_illness_name_label'
+                        android:text="Headache"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_description_labe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_illness_name_label"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/illness_description"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_illness_description_labe"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginRight="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="普通感冒是由多种病毒引起的一种呼吸道常见病，俗称“伤风”，以鼻咽部卡他症状为主要变现。多发于初冬，但春夏天也可发生，感冒一般病例分布是散发性的，不引起流行。流感是流感病毒引起的急性呼吸道传染病，起病急，易爆发流行，高烧、乏力、肌肉酸痛，主要通过接触空气飞沫传播。上呼吸道感染时由病毒引起的鼻腔、咽或喉部的炎症。病情较轻，病程较短，但发病率高，有一定的传染性。"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_polytype_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_illness_description"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/illness_polytype"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_illness_polytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_illness_description"
+                        android:layout_marginLeft="@dimen/w8"
+                        android:layout_marginRight="@dimen/w5"
+                        android:layout_marginTop="@dimen/h3"
+                        android:layout_toRightOf='@id/activity_case_show_illness_polytype_label'
+                        android:text="Headache due to wind cold"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_clinical_feature_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_illness_polytype"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/clinical_feature"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_clinical_feature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_clinical_feature_label"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginRight="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="普通感冒是由多种病毒引起的一种呼吸道常见病，俗称“伤风”，以鼻咽部卡他症状为主要变现。多发于初冬，但春夏天也可发生，感冒一般病例分布是散发性的，不引起流行。流感是流感病毒引起的急性呼吸道传染病，起病急，易爆发流行，高烧、乏力、肌肉酸痛，主要通过接触空气飞沫传播。上呼吸道感染时由病毒引起的鼻腔、咽或喉部的炎症。病情较轻，病程较短，但发病率高，有一定的传染性。"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_drug_recommend_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_clinical_feature"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="@string/drug_recommend"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_drug_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_drug_recommend_label"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginRight="@dimen/w3"
+                        android:layout_marginTop="@dimen/h3"
+                        android:text="普通感冒是由多种病毒引起的一种呼吸道常见病，俗称“伤风”，以鼻咽部卡他症状为主要变现。多发于初冬，但春夏天也可发生，感冒一般病例分布是散发性的，不引起流行。流感是流感病毒引起的急性呼吸道传染病，起病急，易爆发流行，高烧、乏力、肌肉酸痛，主要通过接触空气飞沫传播。上呼吸道感染时由病毒引起的鼻腔、咽或喉部的炎症。病情较轻，病程较短，但发病率高，有一定的传染性。"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/activity_case_show_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_case_show_drug_recommend"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/w3"
+                        android:layout_marginRight="@dimen/w5"
+                        android:layout_marginTop="@dimen/h15"
+                        android:layout_marginBottom="@dimen/h5"
+                        android:text="2019-3-19 20:00:00"
+                        android:textSize="18sp"></TextView>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/activity_case_cv"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5">
+
+                <Button
+                    android:id="@+id/activity_case_show_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/close"
+                    android:textColor="@color/btn_sign_out_color"
+                    android:textSize="16sp"
+                    android:paddingTop="@dimen/h6"
+                    android:paddingBottom="@dimen/h6"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15"
+                    android:layout_marginTop="@dimen/h10"
+                    android:layout_marginBottom="@dimen/h10"
+                    android:layout_marginLeft="@dimen/w5"
+                    android:background="@drawable/btn_pressed_signout"
+                    ></Button>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

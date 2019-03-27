@@ -23,18 +23,7 @@ import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.activities.ArticleActivity;
 import com.example.administrator.easycure.activities.DrawerActivity;
 import com.example.administrator.easycure.adapters.FragmentPromotionLvAdapter;
-import com.example.administrator.easycure.adapters.FragmentScheduleRlvAdapter;
 import com.example.administrator.easycure.utils.CacheUtil;
-import com.example.administrator.easycure.utils.LangGetUtil;
-import com.example.administrator.easycure.utils.RandomColor;
-import com.example.administrator.easycure.utils.RegexUtil;
-import com.example.administrator.easycure.utils.StrUtil;
-
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -107,8 +96,6 @@ public class FragmentPromotion extends Fragment implements View.OnClickListener,
     //如果能进到这个界面说明缓存中已经有数据了，所以就直接从缓存中读数据
     public void readCacheAboutArticles(){
         int article_count = Integer.parseInt((String)(CacheUtil.getCacheData(getContext(),"article_count","String")));
-
-        System.out.println("文章数量：" + article_count);
 
         for(int i = article_count;i >= 1 ;i--){
             String title = (String)(CacheUtil.getCacheData(getContext(),"article" + i + "_title","String"));

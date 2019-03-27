@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/activity_polytype_list_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textSize="16sp"
+        android:textColor="@color/btn_sign_out_color"
+        android:paddingTop="@dimen/h8"
+        android:paddingBottom="@dimen/h8"
+        android:paddingLeft="@dimen/w20"
+        android:paddingRight="@dimen/w20"
+        android:layout_marginTop="@dimen/h20"
+        android:layout_marginBottom="@dimen/h20"
+        android:layout_marginRight="@dimen/w20"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/btn_press_state"></Button>
+
+</LinearLayout>

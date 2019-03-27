@@ -57,7 +57,7 @@ public class SignupActivity extends BaseActivity implements View.OnClickListener
         if(et_userName.length() > 0){
             if(et_password.length() > 0){
                 if(et_password.length() >= 6){
-                    //把用户名和密码写入数据库和SP文件，这个操作在手机验证完成后再完成
+                    //把用户名和密码写入SP文件，这个操作在手机验证完成后再完成
                     MobUtil.sendCode(this,et_userName,et_password);
                 }else{
                     Toast.makeText(this,getResources().getString(R.string.password_length),Toast.LENGTH_SHORT).show();

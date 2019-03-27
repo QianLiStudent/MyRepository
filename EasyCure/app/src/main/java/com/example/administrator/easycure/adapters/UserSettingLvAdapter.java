@@ -67,18 +67,6 @@ public class UserSettingLvAdapter extends BaseAdapter {
         holder.tv.setText((String)(list.get(position).get("tv")));
         holder.tv1.setText("");
 
-        if(position == 3){
-            //loginAccount：是登录的账号（即手机号）
-            String loginAccount = (SpUtil.getUserInfo(context)).get(Constant.PHONENUMBER);
-            System.out.println(loginAccount);
-            User user = DBControler.selectAccountItem(loginAccount);
-            if(user != null){
-                holder.tv1.setText(user.getSecurityPhoneNumber());
-                holder.tv1.setTextColor(context.getResources().getColor(R.color.colorGray));
-            }
-
-        }
-
         return convertView;
     }
 

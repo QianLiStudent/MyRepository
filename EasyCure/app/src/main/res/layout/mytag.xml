@@ -4,7 +4,6 @@
     android:layout_height="match_parent">
 
     <com.example.administrator.easycure.components.Tag
-        xmlns:tag="http://schemas.android.com/apk/res/com.example.administrator.easycure"
         android:id="@+id/fragment_illness_selection_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"> </com.example.administrator.easycure.components.Tag>

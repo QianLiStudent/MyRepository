@@ -13,20 +13,6 @@ import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.BaseActivity;
 import com.example.administrator.easycure.utils.CacheUtil;
 import com.example.administrator.easycure.utils.RandomColor;
-import com.example.administrator.easycure.utils.RegexUtil;
-import com.example.administrator.easycure.utils.StrUtil;
-
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/introduce_us"
+        android:text="@string/release_notes1"
         android:textSize="@dimen/h14"
         android:textColor="#2E9AFE"
         android:lineSpacingMultiplier="1.2"

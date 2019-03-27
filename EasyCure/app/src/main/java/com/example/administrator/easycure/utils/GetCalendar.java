@@ -13,6 +13,7 @@ public class GetCalendar {
     public static int year,month,day,hour,minute;
     public static Calendar calendar;
     public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
+    public static SimpleDateFormat standardDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static String time;
 
     public static String getSettingTime(int year,int month,int day,int hour,int minute){
@@ -35,5 +36,11 @@ public class GetCalendar {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String getStandardTime(){
+        calendar = Calendar.getInstance();
+        time = standardDateFormat.format(calendar.getTime());
+        return time;
     }
 }

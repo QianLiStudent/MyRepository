@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/activity_customer_service_rlx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/h12"
@@ -69,7 +70,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/h15">
+        android:layout_marginTop="@dimen/h15"
+        android:layout_below="@id/activity_customer_service_rlx">
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,4 +87,14 @@
             android:layout_height="match_parent"></ListView>
 
     </LinearLayout>
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_customer_service_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/network_anomaly"
+        android:textSize="18sp"
+        android:visibility="gone"></TextView>
+
+</RelativeLayout>

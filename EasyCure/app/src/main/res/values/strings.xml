@@ -3,7 +3,6 @@
     <string name="main_title">We work for and\nfor you 24h daily</string>
     <string name="main_message">Your health will be guarded by us</string>
     <string name="call_us">Call Us</string>
-    <string name="check_our_shop">Check Our Shop</string>
     <string name="health_information">Health Information</string>
     <string name="something_you_want">Something You Want</string>
     <string name="forgot_pwd">Forgot Password ?</string>
@@ -51,14 +50,15 @@
     <string name="successfully_added">Successfully Added</string>
     <string name="nothing_to_show">nothing to show</string>
     <string name="find_medicine">Find medicine</string>
-    <string name="phone_number">Phone Number</string>
-    <string name="password">Password</string>
+    <string name="phone_number">Your Phone Number</string>
+    <string name="password">Password Composition:</string>
+    <string name="password_pro">Password</string>
     <string name="captcha">Captcha</string>
     <string name="get_captcha">Get Captcha</string>
     <string name="mine">Mine</string>
     <string name="more">More</string>
     <string name="help">Help</string>
-    <string name="credit">Credit</string>
+    <string name="Case">Case Warehouse</string>
     <string name="security_settings">Security Settings</string>
     <string name="emergency_contact">Emergency Contact</string>
     <string name="version_information">Version Information</string>
@@ -69,36 +69,15 @@
     <string name="username">Username</string>
     <string name="username_can_not_be_empty">Username can not be empty</string>
     <string name="password_can_not_be_empty">Password can not be empty</string>
-    <string name="password_length">Password cannot be less than 6 digits</string>
+    <string name="password_length">Password should be between 6 and 13 characters</string>
     <string name="get_code_error">The network speed is slow, please try again later</string>
-    <string-array name="security_question_array1">
-        <item>What is your mother\'s name? </item>
-        <item>What is your father\'s name?</item>
-        <item>Your spouse\'s name is?</item>
-        <item>Where is your birthplace? </item>
-    </string-array>
-    <string-array name="security_question_array2">
-        <item>What is the name of your high school class teacher?</item>
-        <item>What is the name of your junior high school teacher?</item>
-        <item>What is the name of your primary school teacher?</item>
-        <item>What is your student number (or job number)?</item>
-    </string-array>
-    <string-array name="security_question_array3">
-        <item>When is your father\'s birthday?</item>
-        <item>When is your mother\'s birthday?</item>
-        <item>When is your birthday?</item>
-        <item>When is your spouse\'s birthday?</item>
-    </string-array>
     <string name="finish_enroll">Finish Registration</string>
-    <string name="security_not_empty">Security number cannot be empty</string>
-    <string name="secret_answer_not_empty">Secret answer cannot be empty</string>
+    <string name="security_num_not_empty">Security number cannot be empty</string>
     <string name="phone_number_not_empty">Phone number can not be blank</string>
     <string name="wrong_pwd">Wrong Password</string>
-    <string name="security_answer">Security Answer</string>
     <string name="security_phone_num">Security Phone Num</string>
     <string name="retrieve_password">Retrieve Password</string>
-    <string name="find_back_account">You can choose to send a verification code to the previously bound secure
-        phone number or fill in the secret question to retrieve the account.</string>
+    <string name="find_back_account">You can send a verification code to the previously bound secure phone number to retrieve the account.</string>
     <string name="send">Send</string>
     <string name="account_not_empty">Account cannot be empty</string>
     <string name="account_is_empty">Account does not exist</string>
@@ -111,11 +90,11 @@
     <string name="reset">Reset</string>
     <string name="some_info_empty">Please complete the information</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="password_empty_or_inconsistent">Password is empty or inconsistent</string>
-    <string name="update_all_security_question">Confidential issues need to be fully updated</string>
+    <string name="password_inconsistent">Password Inconsistent</string>
     <string name="new_security_phone_num">New security phone num</string>
     <string name="reset_successful">Reset Successful</string>
     <string name="finish_setting">Finish Setting</string>
+    <string name="Wrong_password_format">Wrong password format</string>
     <string name="setting_successful">Setting Successful</string>
     <string name="login_num">The number you are logged in to</string>
     <string name="exit">Press again to exit</string>
@@ -133,10 +112,9 @@
     <string name="automatic_download">Automatic Download</string>
     <string name="version">version</string>
     <string name="version_name">version name</string>
-    <string name="release_notes1">EasyCure version 1 is online. Convenient drug shopping store,
-        health article related information, good health plan recommendation, excellent hospital
-        and pharmacy location service is the biggest feature of this product, and the software
-        supports English version service, which is convenient for English speakers.</string>
+    <string name="release_notes1">EasyCure version 1 is online. Convenient choice of illness, health article related information,
+  Good health plan recommendation, excellent hospital and pharmacy location service is the biggest feature of this product, and
+    the software supports Chinese and English services.It is convenient for people who can speak Chinese and English.</string>
     <string name="ecure_service_agreement">ECure Service Agreement</string>
     <string name="ec_service_agreement">EasyCure Service Agreement</string>
     <string name="service_agreement1">1.Confirmation of ECure Service Agreement</string>
@@ -172,11 +150,14 @@
     4、Nickname: refers to the account name that you open to the public. We treat the user\'s account number (ie mobile phone number)
         confidentially, that is, do not disclose the mobile phone number.\n
     5、Official QQ: 844964206</string>
-    <string name="service_agreement3_content">1、Payment: After the user purchases the medicine, he can enter the payment link.
-        Currently, he only supports WeChat and Alipay.\n
-    2、Drug purchase: We recommend several drugs with high sales and heat for the basic illness selected by the user, but only for
-        screening. The drugs selected by this function can only be used as reference drugs for users to choose basic diseases, such
-        as serious illness. It is not the service object of this service, and it is strongly recommended that you go to the hospital in time.\n
+    <string name="service_agreement3_content">1、Condition selection: The user selects the relevant condition in combination with his or
+        her own symptoms, and further confirms the condition according to the clinical manifestation corresponding to the condition.
+        After selecting the disease, a medical record will be generated. The user can roughly judge the current physical condition
+        according to the description in the case, and the recommended drugs corresponding to the relevant disease are also given in
+        the case.\n
+    2、Drug recommendation: We recommend several drugs with higher sales and heat for the basic symptoms selected by the user, but only
+        for screening. The drugs recommended by the system can only be used as users.The reference drug for selecting a basic condition,
+        such as a serious condition, is not a target of the service, and it is strongly recommended that you go to the hospital in time. \n
     3、Health Information: We will update the Health Information Module regularly to ensure that users can learn some of the common
         health tips in the life of the article and keep the user\'s health information fresh in a regularly updated way.\n
     4、Health knowledge: We will make recommendations on the main parts of the body or some living habits, and let the user know
@@ -189,7 +170,7 @@
         display language according to the user\'s mobile phone time zone. </string>
     <string name="service_agreement4_content">1、Registration: All services are available after registration is complete. The nickname
         you set in your account will be visible to the outside world, and your mobile number (ie login account) will be kept confidential.\n
-        2、Login: We only provide login for this platform (registered users of this platform) or third-party platforms (QQ, WeChat).\n
+        2、Login: We only provide login for this platform (registered users of this platform).\n
         3、Use: The identity element allows us to identify the basis of your identity, please be sure to keep it safe.
         The operation using the identity element and the instructions issued are deemed to be made by you. The account,
         password and other information caused by your reasons are fraudulently used, stolen or illegally used, and the
@@ -198,17 +179,10 @@
         In order to protect the legitimate interests of you and other users, the account you apply for cancellation should
         have no unresolved rights or obligations or other disputes arising from the cancellation of the account. There are
         no outstanding transactions.</string>
-    <string name="service_agreement5_content">1、Authentication: During the authentication process, keep the network
-        environment unblocked and ensure that the network environment is secure and login and payment operations are performed.\n
-    2、Self-purchasing: We offer a drug store for users to show users high-quality, high-heat, and good-selling drugs after choosing
-        the right condition. But this is only a recommendation and can only be used as a reference. If the user is indeed able to
-        determine the common symptoms such as cough, etc., you can refer to the results recommended by the drug to purchase the drug.
-        If the user is not sure about the specific condition and the condition is serious, it is not the target of this function, and
-        it is strongly recommended. The user went to the hospital for medical treatment in time. If the user makes a mistake, purchases
-        the wrong product, or is seriously ill, still using the software to solve the serious problem and cause serious physical problems,
-        all responsibility shall be borne by the user and the application will not be held responsible.\n
-    3、Payment: We provide a professional payment interface (Alipay payment, WeChat payment) and allow users to pay for drugs after
-        purchasing the drug. The process is consistent with ordinary online shopping.\n</string>
+    <string name="service_agreement5_content">1. Authentication: In the process of identity verification, please keep the network environment unblocked, and ensure that the network environment is safe and you can log in and check the symptoms. \n
+     2, the disease query, we launched the disease inquiry service, according to the type of disease - clinical performance to correspond to the user\'s own situation, to determine what type of disease is probably, and provide recommended drugs for reference. But this is only a recommendation and can only be used as a reference. in case
+     Users can indeed determine their own symptoms such as: cough and other common symptoms, you can refer to the results of drug recommendations to buy drugs, and if the user is not sure about the specific disease and the condition is more serious, then do not act
+     The service object of this function, and it is strongly recommended that the user go to the hospital in time for medical treatment. \n</string>
     <string name="service_agreement6_content">1、You are required to abide by the laws and regulations of the People\'s Republic of China
         and the countries or regions in which you belong, reside or carry out business activities or other business, and may not use our
         services for illegal purposes (including transactions for prohibiting or restricting trading goods). ), nor can we use
@@ -236,8 +210,8 @@
         make hairstyles or publicly publish ECure programs or content without our written consent;\n2、Respect for intellectual property
         rights is also your obligation. If there is a violation, you will be liable for damages.</string>
 
-    <string name="security_setting_title">You can choose any one to fill in, and it will take effect immediately after saving the changes.</string>
-    <string name="unmodified_content">Unmodified content</string>
+    <string name="security_setting_title">After filling in the security phone number and password to submit, you can complete the account to modify the information</string>
+    <string name="fields_not_filled_in">There are fields not filled in</string>
     <string name="problem_help">Problem Help</string>
     <string name="customer_service">My customer service</string>
     <string name="feedback">Feedback</string>
@@ -246,11 +220,6 @@
     <string name="my_customer_service">My Customer Service</string>
     <string name="content_customized">Custom content</string>
     <string name="your_problem">Guess Your Problem</string>
-    <string name="modify_security_num">How to modify the security phone number</string>
-    <string name="modify_secret_issus">How to modify the secret issue</string>
-    <string name="modify_phone_num">How to change the bound phone number</string>
-    <string name="use_shopping_store">How to use the shopping store</string>
-    <string name="use_location_services">How to use location services correctly</string>
     <string name="commit">Commit</string>
     <string name="feedback_content">（Required）Problem you want to feedback.</string>
     <string name="questions_and_opinions">Questions and opinions</string>
@@ -277,4 +246,53 @@
     <string name="article_lose">The article is missing, we will add it as soon as possible</string>
     <string name="data_getting">Datas are loading，please wait a minute</string>
     <string name="checking_network">Checking The Newwork</string>
+    <string name="case_username">Username: </string>
+    <string name="illness_name">Illness Name: </string>
+    <string name="illness_description">Illness Description: </string>
+    <string name="clinical_feature">Clinical Feature: </string>
+    <string name="illness_polytype">Polytype: </string>
+    <string name="drug_recommend">Drug Recommend: </string>
+    <string name="close">Close</string>
+    <string name="not_empty">The input cannot be null</string>
+    <string name="username_length">Username cannot exceed 10 digits</string>
+    <string name="word_poor">Ah, the word is poor, we will add it as soon as possible</string>
+    <string name="phone_num_no_exist">Phone number does not exist</string>
+    <string name="phone_num_format_error">Malformed phone number</string>
+    <string name="account_not_signup">Account Not Registered</string>
+    <string name="code_not_empty">Verification code must be filled</string>
+    <string name="wrong_password_format">Wrong password format</string>
+    <string name="security_settings_title">Bind the secure phone number. When you need to change the password, the phone number will get a text message and authenticate based on the text message.</string>
+    <string name="checking">Checking in progress, please hold on</string>
+    <string name="is_remember_pwd">Remember the Password</string>
+    <string name="type_select">Type Selection</string>
+    <string name="select_tags">Select at least one Tag</string>
+    <string name="disease">Disease:</string>
+    <string name="polytype">Polytype:</string>
+    <string name="symptom">Symptom:</string>
+    <string name="reset_account_msg">You can completely reset the secure phone number, username and password bound to your account by completing the following information and verifying it.</string>
+    <string name="reLogin">Network abnormal, please login again</string>
+    <string name="tag1">Common cold</string>
+    <string name="tag2">Headache</string>
+    <string name="tag3">Pharyngitis</string>
+    <string name="tag4">Mouth ulcer</string>
+    <string name="tag5">Acute gastroenteritis</string>
+    <string name="tag6">Sprain</string>
+    <string name="tag7">Dysmenorrhea</string>
+    <string name="tag8">Constipation</string>
+    <string name="popular_searches">Popular Searches</string>
+    <string name="case1">Case 1 </string>
+    <string name="case2">Case 2 </string>
+    <string name="case3">Case 3 </string>
+    <string name="searching">Searching</string>
+    <string name="uploading">Uploading</string>
+    <string name="illness_plan">plan</string>
+    <string name="new_username">New Username</string>
+    <string name="illegal_character">Illegal character</string>
+    <string name="modify_username">Change Nickname</string>
+    <string name="save">Save</string>
+    <string name="no_save">Don\'t Save</string>
+    <string name="resetCase">has not been processed</string>
+    <string name="authentication">Authentication</string>
+    <string name="loading">Loading</string>
+    <string name="init_data">Initializing Data</string>
 </resources>

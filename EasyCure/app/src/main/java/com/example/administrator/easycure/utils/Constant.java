@@ -16,12 +16,6 @@ public class Constant {
     //数据库中备忘录表名
     public static final String TABLE_NAME_SCHEDULE_PLAN = "SchedulePlan";
 
-    //数据库中用户数据表名
-    public static final String TABLE_NAME_USER = "User";
-
-    //数据库中版本信息数据表名
-    public static final String  TABLE_NAME_VERSION_INFO = "VersionInfo";
-
     //月份数组
     public static final String[] MONTH_ARRAY = {"Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"};
 
@@ -30,6 +24,9 @@ public class Constant {
 
     //保存用户查询病症的历史记录的sp文件
     public static final String DISEASERECORDSPFILE = "diseaseRecodeSpFile";
+
+    //保存病例操作记录的sp文件
+    public static final String CASESPFILE = "caseSpFile";
 
     //用户名标识
     public static final String USERNAME = "username";
@@ -41,17 +38,7 @@ public class Constant {
     public static final String PHONENUMBER = "phonenumber";
 
     //用户绑定安全号码标识
-    public static final String SECURITY_NUMBER = "securitynumber";
-
-    //密保问题1、2、3的标识
-    public static final String SECURITY_QUESTION1 = "securityquestion1";
-    public static final String SECURITY_QUESTION2 = "securityquestion2";
-    public static final String SECURITY_QUESTION3 = "securityquestion3";
-
-    //密保答案1、2、3的标识
-    public static final String SECURITY_ANSWER1 = "securityanswer1";
-    public static final String SECURITY_ANSWER2 = "securityanswer2";
-    public static final String SECURITY_ANSWER3 = "securityanswer3";
+    public static final String SECURITY_NUMBER = "security_number";
 
     //检查更新
     public static final String CHECK_UPDATE = "checkUpdate";
@@ -66,6 +53,8 @@ public class Constant {
 
     //用户的登录状态
     public static final String ISLOGINNOW = "isLoginNow";
+    //记住密码状态
+    public static final String REMEMBER_PASSWORD = "isRemember";
 
     public static final String IS_LATEST_VERSION = "isLatestVersion";
 

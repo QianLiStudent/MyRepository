@@ -15,8 +15,7 @@
        android:paddingTop="@dimen/h35"
        android:layout_marginLeft="@dimen/w20"
        android:layout_marginTop="@dimen/h20"
-       android:orientation="vertical"
-       >
+       android:orientation="vertical">
        <ImageView
            android:layout_width="@dimen/w60"
            android:layout_height="@dimen/h50"
@@ -68,7 +67,7 @@
         android:id="@+id/activity_main_rl1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/h10"
+        android:layout_marginTop="@dimen/h20"
         android:layout_below="@id/activity_main_ll1"
         >
         <RelativeLayout

@@ -3,7 +3,6 @@
 
     <style name="SplashTheme" parent="AppTheme">
         <item name="android:actionBarTheme">@null</item>
-        <item name="android:windowBackground">@drawable/splash</item>
         <item name="android:windowFullscreen">true</item>
 
     </style>

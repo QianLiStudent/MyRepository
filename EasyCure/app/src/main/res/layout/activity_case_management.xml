@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_case_management_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h12"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_marginRight="@dimen/w15">
+        <ImageView
+            android:id="@+id/activity_case_management_iv"
+            android:layout_width="@dimen/w20"
+            android:layout_height="@dimen/h15"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_back"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Case"
+            android:textSize="@dimen/h15"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/w6"></TextView>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/activity_case_management_elv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null"
+        android:layout_below="@id/activity_case_management_rl"
+        android:layout_marginTop="@dimen/h20"></ExpandableListView>
+
+    <View
+        android:id="@+id/activity_case_management_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:alpha="0.8"
+        android:visibility="gone"></View>
+
+    <TextView
+        android:id="@+id/activity_case_management_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:visibility="gone"></TextView>
+
+
+</RelativeLayout>

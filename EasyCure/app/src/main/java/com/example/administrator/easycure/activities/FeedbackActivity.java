@@ -1,7 +1,10 @@
 package com.example.administrator.easycure.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
@@ -16,9 +19,24 @@ import android.widget.Toast;
 
 import com.example.administrator.easycure.R;
 import com.example.administrator.easycure.utils.BaseActivity;
+import com.example.administrator.easycure.utils.LangGetUtil;
+import com.example.administrator.easycure.utils.NetworkUsable;
+import com.example.administrator.easycure.utils.SpUtil;
+import com.example.administrator.easycure.utils.StrUtil;
 
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Administrator on 2018/11/5 0005.
@@ -35,6 +53,27 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
     private List<Boolean> list = new ArrayList<>();
     //mList保存checkbox的具体选中项，若第一个checkbox被选中则第一个元素保存为0，以此类推
     private List<Integer> mList = new ArrayList<>();
+
+    private String data = "";
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+            switch(msg.what){
+                case 0:
+                    SpUtil.removePassword(FeedbackActivity.this);
+
+                    Toast.makeText(FeedbackActivity.this,getResources().getString(R.string.reLogin),Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(FeedbackActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,10 +153,44 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
                     toast.show();
                 }else{
                     //输入框中输入的字符串长度，如果checkbox至少选择一个了，那么就会判断输入框的字符长度是否大于10
-                    int len = activity_feedback_et.getText().toString().trim().length();
-                    if(len >= 10){
+                    String str = activity_feedback_et.getText().toString().trim();
+                    int len = str.length();
+
+                    if(len >= 10) {
                         //如果checkbox有选择至少一个，输入框也输入合法，就维护到数据库中
-                        System.out.println("可以维护到数据库了");
+                        Map<String, String> map = new HashMap<>();
+
+                        if (NetworkUsable.isNetworkConnected(this)) {
+                            for (int i = 0; i < mList.size(); i++) {
+
+                                String cbText = "";
+
+                                switch (mList.get(i)) {
+                                    case 0:
+                                        cbText = activity_feedback_cb1.getText().toString();
+                                        break;
+                                    case 1:
+                                        cbText = activity_feedback_cb2.getText().toString();
+                                        break;
+                                    case 2:
+                                        cbText = activity_feedback_cb3.getText().toString();
+                                        break;
+                                    case 3:
+                                        cbText = activity_feedback_cb4.getText().toString();
+                                        break;
+                                }
+                                map.put("description" + (i + 1), cbText);
+                            }
+                            map.put("description" + (map.size() + 1), str);
+
+                            submitToServer(map);
+                        }else{
+                            Toast.makeText(this,getResources().getString(R.string.network_anomaly),Toast.LENGTH_SHORT).show();
+
+                            Message msg = handler.obtainMessage();
+                            msg.what = 0;
+                            handler.sendMessageDelayed(msg,1000);
+                        }
                     }else{
                         //输入框输入的数据长度小于10，提示至少输入10个字符
                         Toast toast = Toast.makeText(this,getResources().getString(R.string.input_length),Toast.LENGTH_SHORT);
@@ -125,9 +198,82 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
                         toast.show();
                     }
                 }
-
                 break;
         }
+    }
+
+    //提交反馈信息到数据库
+    public void submitToServer(final Map<String,String> map){
+        new Thread(new Runnable() {
+
+            String urlStr = "http://119.23.208.63/ECure-system/public/index.php/submitFeedback";
+
+            InputStream is;
+
+            @Override
+            public void run() {
+                try{
+                    URL url = new URL(urlStr);
+
+                    HttpURLConnection con = (HttpURLConnection)url.openConnection();
+
+                    con.setRequestMethod("POST");
+                    con.setConnectTimeout(5000);
+
+                    Set<String> set = map.keySet();
+
+                    Iterator<String> iterator = set.iterator();
+
+                    while(iterator.hasNext()){
+
+                        String key = iterator.next();
+                        String val = map.get(key);
+
+                        data = data + URLEncoder.encode(key) + "=" + URLEncoder.encode(val) + "&";
+                    }
+
+                    data = data + "count=" + URLEncoder.encode(map.size() + "") + "&userId=" +
+                            URLEncoder.encode(SpUtil.getPhonenumber(FeedbackActivity.this));
+
+                    con.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                    con.setRequestProperty("Content-Length",data.length() + "");
+
+                    con.setDoOutput(true);
+
+                    OutputStream os = con.getOutputStream();
+
+                    os.write(data.getBytes());
+
+                    int code = con.getResponseCode();
+
+                    if(code == 200){
+                        is = con.getInputStream();
+
+                        String jsonStr = StrUtil.stream2String(is);
+
+                        if (jsonStr.startsWith("\ufeff")) {
+                            jsonStr = jsonStr.substring(1);
+                        }
+
+                        JSONObject json = new JSONObject(jsonStr);
+
+                        final String resultMsg = json.getString("msg_" + LangGetUtil.langGet());
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(FeedbackActivity.this,resultMsg,Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(FeedbackActivity.this,MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+                    }
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @Override
@@ -158,7 +304,6 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
             if (getCurrentFocus().getWindowToken() != null) {
                 //表示软键盘窗口总是隐藏，除非开始时以SHOW_FORCED显示。
                 imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-                System.out.println("隐藏软键盘");
             }
         }
     }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/h10"
+    android:paddingLeft="@dimen/w10"
+    android:paddingBottom="@dimen/h10">
+
+    <ImageView
+        android:id="@+id/expang_list_parent_item_iv"
+        android:layout_width="@dimen/h15"
+        android:layout_height="@dimen/w15"
+        android:background="@drawable/expand"></ImageView>
+
+    <TextView
+        android:id="@+id/expang_list_parent_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试数据"
+        android:textSize="16sp"
+        android:layout_marginLeft="@dimen/w8"
+        android:layout_toRightOf="@id/expang_list_parent_item_iv"
+        android:layout_centerVertical="true"></TextView>
+
+</RelativeLayout>

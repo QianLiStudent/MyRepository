@@ -31,23 +31,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/w10"
         android:paddingRight="@dimen/h10"
-        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
         ></ListView>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="增"
-        android:onClick="click1"></Button>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="删"
-        android:onClick="click2"></Button>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="改"
-        android:onClick="click3"></Button>
 
 </LinearLayout>

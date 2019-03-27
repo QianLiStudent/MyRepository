@@ -25,18 +25,19 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/activity_personal_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="用户名"
         android:textSize="@dimen/h22"
         android:textStyle="bold"
         android:layout_marginLeft="@dimen/w22"
-        android:layout_marginTop="@dimen/h10"></TextView>
+        android:layout_marginTop="@dimen/h15"></TextView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/h10"
-        android:layout_marginTop="@dimen/h10"
+        android:layout_marginTop="@dimen/h15"
         android:background="#F2F2F2"></View>
 
     <RelativeLayout
@@ -57,9 +58,9 @@
             android:text="@string/sign_out"
             android:textSize="@dimen/h13"
             android:textColor="@color/btn_sign_out_color"
-            android:layout_marginBottom="@dimen/h20"
+            android:layout_marginTop="@dimen/h50"
             android:background="@drawable/btn_press_state_signout"
-            android:layout_alignParentBottom="true"></Button>
+            android:layout_below="@id/activity_personal_lv"></Button>
     </RelativeLayout>
 
 

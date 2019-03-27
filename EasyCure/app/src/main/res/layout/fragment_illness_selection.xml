@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_illness_selection_bg"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff">
 
     <RelativeLayout
+        android:id="@+id/fragment_illness_selection_rl1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/h15"
@@ -48,10 +50,12 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/fragment_illness_selection_rl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/h8"
-        android:layout_marginBottom="@dimen/h3">
+        android:layout_marginBottom="@dimen/h3"
+        android:layout_below="@id/fragment_illness_selection_rl1">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,11 +91,13 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/fragment_illness_selection_rl3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/h5"
         android:layout_marginLeft="@dimen/w20"
-        android:layout_marginRight="@dimen/w20">
+        android:layout_marginRight="@dimen/w20"
+        android:layout_below="@id/fragment_illness_selection_rl2">
 
         <TextView
             android:id="@+id/fragment__illness_selection_tv1"
@@ -117,10 +123,47 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
+        android:layout_below="@id/fragment_illness_selection_rl3"
         app:wlyHorizontalSpacing="5dp"
         app:wlyVerticalSpacing="5dp"
         app:wlyGravity="top">
 
     </am.widget.wraplayout.WrapLayout>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/fragment_illness_selection_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textSize="16sp"
+        android:textColor="@color/btn_sign_out_color"
+        android:paddingTop="@dimen/h6"
+        android:paddingBottom="@dimen/h6"
+        android:paddingLeft="@dimen/w22"
+        android:paddingRight="@dimen/w22"
+        android:layout_marginBottom="@dimen/h20"
+        android:background="@drawable/btn_press_state"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:stateListAnimator="@null"></Button>
+
+    <View
+        android:id="@+id/bg_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:alpha="0.8"
+        android:visibility="gone"></View>
+
+    <TextView
+        android:id="@+id/fragment_illness_selection_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textSize="@dimen/h13"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:visibility="gone"></TextView>
+
+
+</RelativeLayout>

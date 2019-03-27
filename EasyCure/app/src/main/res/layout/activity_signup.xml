@@ -67,9 +67,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/h33"
                 android:background="@drawable/et_focus_state"
-                android:hint="@string/password"
+                android:hint="@string/password_pro"
                 android:inputType="textPassword"
-                android:maxLength="20"
+                android:maxLength="13"
                 android:maxLines="1"
                 android:textSize="@dimen/h11"
                 android:paddingLeft="@dimen/w10"></EditText>
